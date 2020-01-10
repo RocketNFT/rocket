@@ -11,24 +11,19 @@ contract Escrow is ERC165 {
     constructor()public {
         _registerInterface(_ERC721_RECEIVED);
     }
-
-    struct escrowObject {
-        address borrower;
-        address lender;
-    }
     
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
+    
 
-    
-    uint256 public escrowTime;
-    //smart contract, token, owner
-    
     mapping(address => mapping(uint256 => address)) public escrowBalance;
+
+    // smart contract where the NFT is stored, and who deposited it
     mapping(address => mapping(uint256 => address)) public _tokenOwner;
 
     /**
-     * @dev Gets the owner of the specified token ID.
+     * @dev Gets the owner of the specified token ID at specified smart contract address.
      * @param tokenId uint256 ID of the token to query the owner of
+     * @param contractAddress address of the smart contract to query the owner of given token
      * @return address currently marked as the owner of the given token ID
      */
     function ownerOf(address contractAddress, uint256 tokenId) public view returns (address) {
@@ -40,6 +35,10 @@ contract Escrow is ERC165 {
 
     mapping(address => mapping(uint256 => address)) public escrowExpiration;
 
+
+    /**
+    * @dev When someone sends us a token record it so that we have an internal record of who owns what
+     */
     function onERC721Received(
         address operator, 
         address from, 
