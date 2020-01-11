@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "ganache-cli": "^6.8.1",
-    "truffle": "^5.1.7"
+    "truffle": "^5.1.7",
+    "truffle-hdwallet-provider": "^1.0.17"
   },
   "devDependencies": {
     "@openzeppelin/test-environment": "^0.1.1",
