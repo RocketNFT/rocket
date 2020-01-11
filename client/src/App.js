@@ -50,21 +50,21 @@ class App extends Component {
 
       // Get the contract instance.
       const networkId = await web3.eth.net.getId();
-      const deployedNetwork = this.deployedNetworkIds(networkId).bankAddress
-      const NFTdeployedNetwork = this.deployedNetworkIds(networkId).nftAddress
+      const bankAddress = this.deployedNetworkIds(networkId).bankAddress
+      const nftAddress = this.deployedNetworkIds(networkId).nftAddress
     
       const BankInstance = new web3.eth.Contract(
         BankContract.abi,
-        deployedNetwork && deployedNetwork.address,
+        bankAddress,
       );
       const NFTInstance = new web3.eth.Contract(
         NFTContract.abi,
-        NFTdeployedNetwork && NFTdeployedNetwork.address,
+        nftAddress,
       );
       
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      const newState = { web3, accounts, BankInstance, NFTInstance, ERC721ContractAddress: NFTInstance._address }
+      const newState = { web3, accounts, BankInstance, NFTInstance, ERC721ContractAddress: nftAddress }
       console.log(newState)
       this.setState(newState);
     } catch (error) {
