@@ -4,7 +4,13 @@ import NFTContract from "./contracts/NFToken.json";
 import ERC721Contract from "./contracts/ERC721.json";
 import getWeb3 from "./getWeb3";
 
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+
 import "./App.css";
+
+import Card from './components/Card'
 
 class App extends Component {
   state = {
@@ -134,31 +140,72 @@ class App extends Component {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
+
+    const AccountCardProps = {
+      title: 'Personal Wallet',
+      address: this.state.accounts[0],
+      balance: this.state.ownerBalance
+    }
+    const NFTCardProps = {
+      title: 'NFT Contract',
+      address: this.state.NFTInstance._address,
+      actions: [
+        {
+          value: 'Mint token',
+          onClick: this.mintTokenTransfer
+        }
+      ]
+    }
+    const bankCardProps = {
+      title: 'Bank Contract',
+      address: this.state.BankInstance._address,
+      balance: this.state.bankBalance,
+      actions: [
+        {
+          value: 'Deposit',
+          onClick: this.deposit
+        },
+        {
+          value: 'Withdraw',
+          onClick: this.withdraw
+        }
+      ]
+    }
     return (
       <div className="App">
-        <h1>Good to Go!</h1>
-        <p>Your Truffle Box is installed and ready.</p>
-        <h2>Smart Contract Example</h2>
+        <h2>MVP Banking</h2>
         <p>
-          If your contracts compiled and migrated successfully, below will show.
+          Try changing the Token ID {this.state.tokenId} (number) and click mint, see Personal balance +1.
         </p>
         <p>
-          Try changing the value and click mint. (for now check console log on DevTools)
+          Keep the same Token ID {this.state.tokenId} and click Deposit to deposit this NFT token on Bank contract.
         </p>
         <p>
-          Owner address {this.state.accounts[0]} NFT Balance: {this.state.ownerBalance}
+          Last, click Withdraw to transfer NFT token {this.state.tokenId} from Bank contract to Personal wallet
         </p>
-        <p>
-          NFT Contract address {this.state.ERC721Instance._address}
-        </p>
-        <label>Token id</label>
-        <input onChange={this.handleTokenIdInput} value={this.state.tokenId}/>
-        <button onClick={this.mintTokenTransfer}>Mint Token</button>
-        <p>
-          Bank Contract address {this.state.BankInstance._address} NFT Balance: {this.state.bankBalance}
-        </p>
-        <button onClick={this.deposit}>Deposit</button>
-        <button onClick={this.withdraw}>Withdraw</button>
+        <TextField
+          id="filled-full-width"
+          label="Token ID"
+          style={{ margin: 8 }}
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="filled"
+          onChange={this.handleTokenIdInput}
+          value={this.state.tokenId}
+        />
+        <Grid container justify="center" spacing={2}>
+          <Grid item>
+            <Card {...AccountCardProps}/>
+          </Grid>
+          <Grid item>
+            <Card {...NFTCardProps}/>
+          </Grid>
+          <Grid item>
+            <Card {...bankCardProps}/>
+          </Grid>
+        </Grid>
       </div>
     );
   }
