@@ -452,14 +452,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/tests/mocks/nf-token-test-mock.sol",
     "exportedSymbols": {
       "NFTokenTestMock": [
-        2340
+        2581
       ]
     },
-    "id": 2341,
+    "id": 2582,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2322,
+        "id": 2563,
         "literals": [
           "solidity",
           "^",
@@ -472,10 +472,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/mocks/nf-token-mock.sol",
         "file": "../../contracts/mocks/nf-token-mock.sol",
-        "id": 2323,
+        "id": 2564,
         "nodeType": "ImportDirective",
-        "scope": 2341,
-        "sourceUnit": 807,
+        "scope": 2582,
+        "sourceUnit": 1048,
         "src": "26:49:23",
         "symbolAliases": [],
         "unitAlias": ""
@@ -486,48 +486,48 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2324,
+              "id": 2565,
               "name": "NFTokenMock",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 806,
+              "referencedDeclaration": 1047,
               "src": "107:11:23",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_NFTokenMock_$806",
+                "typeIdentifier": "t_contract$_NFTokenMock_$1047",
                 "typeString": "contract NFTokenMock"
               }
             },
-            "id": 2325,
+            "id": 2566,
             "nodeType": "InheritanceSpecifier",
             "src": "107:11:23"
           }
         ],
         "contractDependencies": [
-          806,
-          870,
-          1030,
-          2108,
-          2148,
-          2180
+          1047,
+          1111,
+          1271,
+          2349,
+          2389,
+          2421
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2340,
+        "id": 2581,
         "linearizedBaseContracts": [
-          2340,
-          806,
-          870,
-          2108,
-          2180,
-          2148,
-          1030
+          2581,
+          1047,
+          1111,
+          2349,
+          2421,
+          2389,
+          1271
         ],
         "name": "NFTokenTestMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2338,
+              "id": 2579,
               "nodeType": "Block",
               "src": "290:32:23",
               "statements": [
@@ -537,11 +537,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 2335,
+                        "id": 2576,
                         "name": "_tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2327,
+                        "referencedDeclaration": 2568,
                         "src": "308:8:23",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -558,32 +558,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 2332,
+                        "id": 2573,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2420,
+                        "referencedDeclaration": 2661,
                         "src": "296:5:23",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_NFTokenTestMock_$2340",
+                          "typeIdentifier": "t_super$_NFTokenTestMock_$2581",
                           "typeString": "contract super NFTokenTestMock"
                         }
                       },
-                      "id": 2334,
+                      "id": 2575,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_burn",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1939,
+                      "referencedDeclaration": 2180,
                       "src": "296:11:23",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 2336,
+                    "id": 2577,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -597,27 +597,27 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2337,
+                  "id": 2578,
                   "nodeType": "ExpressionStatement",
                   "src": "296:21:23"
                 }
               ]
             },
             "documentation": "@dev Removes a NFT from owner.\n@param _tokenId Which NFT we want to remove.",
-            "id": 2339,
+            "id": 2580,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 2330,
+                "id": 2571,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 2329,
+                  "id": 2570,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 843,
+                  "referencedDeclaration": 1084,
                   "src": "278:9:23",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -631,15 +631,15 @@
             "name": "burn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2328,
+              "id": 2569,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2327,
+                  "id": 2568,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2339,
+                  "scope": 2580,
                   "src": "240:16:23",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -648,7 +648,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2326,
+                    "id": 2567,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "240:7:23",
@@ -664,19 +664,19 @@
               "src": "234:26:23"
             },
             "returnParameters": {
-              "id": 2331,
+              "id": 2572,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "290:0:23"
             },
-            "scope": 2340,
+            "scope": 2581,
             "src": "221:101:23",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2341,
+        "scope": 2582,
         "src": "77:248:23"
       }
     ],
@@ -686,14 +686,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/tests/mocks/nf-token-test-mock.sol",
     "exportedSymbols": {
       "NFTokenTestMock": [
-        2340
+        2581
       ]
     },
-    "id": 2341,
+    "id": 2582,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2322,
+        "id": 2563,
         "literals": [
           "solidity",
           "^",
@@ -706,10 +706,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/mocks/nf-token-mock.sol",
         "file": "../../contracts/mocks/nf-token-mock.sol",
-        "id": 2323,
+        "id": 2564,
         "nodeType": "ImportDirective",
-        "scope": 2341,
-        "sourceUnit": 807,
+        "scope": 2582,
+        "sourceUnit": 1048,
         "src": "26:49:23",
         "symbolAliases": [],
         "unitAlias": ""
@@ -720,48 +720,48 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2324,
+              "id": 2565,
               "name": "NFTokenMock",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 806,
+              "referencedDeclaration": 1047,
               "src": "107:11:23",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_NFTokenMock_$806",
+                "typeIdentifier": "t_contract$_NFTokenMock_$1047",
                 "typeString": "contract NFTokenMock"
               }
             },
-            "id": 2325,
+            "id": 2566,
             "nodeType": "InheritanceSpecifier",
             "src": "107:11:23"
           }
         ],
         "contractDependencies": [
-          806,
-          870,
-          1030,
-          2108,
-          2148,
-          2180
+          1047,
+          1111,
+          1271,
+          2349,
+          2389,
+          2421
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2340,
+        "id": 2581,
         "linearizedBaseContracts": [
-          2340,
-          806,
-          870,
-          2108,
-          2180,
-          2148,
-          1030
+          2581,
+          1047,
+          1111,
+          2349,
+          2421,
+          2389,
+          1271
         ],
         "name": "NFTokenTestMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2338,
+              "id": 2579,
               "nodeType": "Block",
               "src": "290:32:23",
               "statements": [
@@ -771,11 +771,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 2335,
+                        "id": 2576,
                         "name": "_tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2327,
+                        "referencedDeclaration": 2568,
                         "src": "308:8:23",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -792,32 +792,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 2332,
+                        "id": 2573,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2420,
+                        "referencedDeclaration": 2661,
                         "src": "296:5:23",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_NFTokenTestMock_$2340",
+                          "typeIdentifier": "t_super$_NFTokenTestMock_$2581",
                           "typeString": "contract super NFTokenTestMock"
                         }
                       },
-                      "id": 2334,
+                      "id": 2575,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_burn",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1939,
+                      "referencedDeclaration": 2180,
                       "src": "296:11:23",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 2336,
+                    "id": 2577,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -831,27 +831,27 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2337,
+                  "id": 2578,
                   "nodeType": "ExpressionStatement",
                   "src": "296:21:23"
                 }
               ]
             },
             "documentation": "@dev Removes a NFT from owner.\n@param _tokenId Which NFT we want to remove.",
-            "id": 2339,
+            "id": 2580,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 2330,
+                "id": 2571,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 2329,
+                  "id": 2570,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 843,
+                  "referencedDeclaration": 1084,
                   "src": "278:9:23",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -865,15 +865,15 @@
             "name": "burn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2328,
+              "id": 2569,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2327,
+                  "id": 2568,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2339,
+                  "scope": 2580,
                   "src": "240:16:23",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -882,7 +882,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2326,
+                    "id": 2567,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "240:7:23",
@@ -898,19 +898,19 @@
               "src": "234:26:23"
             },
             "returnParameters": {
-              "id": 2331,
+              "id": 2572,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "290:0:23"
             },
-            "scope": 2340,
+            "scope": 2581,
             "src": "221:101:23",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2341,
+        "scope": 2582,
         "src": "77:248:23"
       }
     ],
@@ -922,7 +922,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-01-02T23:03:20.892Z",
+  "updatedAt": "2020-01-15T03:07:36.019Z",
   "devdoc": {
     "methods": {
       "approve(address,uint256)": {

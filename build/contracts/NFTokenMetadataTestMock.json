@@ -546,14 +546,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/tests/mocks/nf-token-metadata-test-mock.sol",
     "exportedSymbols": {
       "NFTokenMetadataTestMock": [
-        2290
+        2531
       ]
     },
-    "id": 2291,
+    "id": 2532,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2262,
+        "id": 2503,
         "literals": [
           "solidity",
           "^",
@@ -566,10 +566,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/mocks/nf-token-metadata-mock.sol",
         "file": "../../contracts/mocks/nf-token-metadata-mock.sol",
-        "id": 2263,
+        "id": 2504,
         "nodeType": "ImportDirective",
-        "scope": 2291,
-        "sourceUnit": 781,
+        "scope": 2532,
+        "sourceUnit": 1022,
         "src": "26:58:21",
         "symbolAliases": [],
         "unitAlias": ""
@@ -580,58 +580,58 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2264,
+              "id": 2505,
               "name": "NFTokenMetadataMock",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 780,
+              "referencedDeclaration": 1021,
               "src": "124:19:21",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_NFTokenMetadataMock_$780",
+                "typeIdentifier": "t_contract$_NFTokenMetadataMock_$1021",
                 "typeString": "contract NFTokenMetadataMock"
               }
             },
-            "id": 2265,
+            "id": 2506,
             "nodeType": "InheritanceSpecifier",
             "src": "124:19:21"
           }
         ],
         "contractDependencies": [
-          780,
-          870,
-          914,
-          1030,
-          1431,
-          2108,
-          2148,
-          2180
+          1021,
+          1111,
+          1155,
+          1271,
+          1672,
+          2349,
+          2389,
+          2421
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2290,
+        "id": 2531,
         "linearizedBaseContracts": [
-          2290,
-          780,
-          870,
-          1431,
-          914,
-          2108,
-          2180,
-          2148,
-          1030
+          2531,
+          1021,
+          1111,
+          1672,
+          1155,
+          2349,
+          2421,
+          2389,
+          1271
         ],
         "name": "NFTokenMetadataTestMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2276,
+              "id": 2517,
               "nodeType": "Block",
               "src": "270:5:21",
               "statements": []
             },
             "documentation": null,
-            "id": 2277,
+            "id": 2518,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -639,11 +639,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 2272,
+                    "id": 2513,
                     "name": "_name",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2267,
+                    "referencedDeclaration": 2508,
                     "src": "252:5:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -652,11 +652,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2273,
+                    "id": 2514,
                     "name": "_symbol",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2269,
+                    "referencedDeclaration": 2510,
                     "src": "259:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -664,17 +664,17 @@
                     }
                   }
                 ],
-                "id": 2274,
+                "id": 2515,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 2271,
+                  "id": 2512,
                   "name": "NFTokenMetadataMock",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 780,
+                  "referencedDeclaration": 1021,
                   "src": "232:19:21",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_NFTokenMetadataMock_$780_$",
+                    "typeIdentifier": "t_type$_t_contract$_NFTokenMetadataMock_$1021_$",
                     "typeString": "type(contract NFTokenMetadataMock)"
                   }
                 },
@@ -685,15 +685,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2270,
+              "id": 2511,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2267,
+                  "id": 2508,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2277,
+                  "scope": 2518,
                   "src": "166:19:21",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -702,7 +702,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2266,
+                    "id": 2507,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "166:6:21",
@@ -716,10 +716,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2269,
+                  "id": 2510,
                   "name": "_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2277,
+                  "scope": 2518,
                   "src": "191:21:21",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -728,7 +728,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2268,
+                    "id": 2509,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "191:6:21",
@@ -744,12 +744,12 @@
               "src": "160:56:21"
             },
             "returnParameters": {
-              "id": 2275,
+              "id": 2516,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "270:0:21"
             },
-            "scope": 2290,
+            "scope": 2531,
             "src": "149:126:21",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -757,7 +757,7 @@
           },
           {
             "body": {
-              "id": 2288,
+              "id": 2529,
               "nodeType": "Block",
               "src": "375:35:21",
               "statements": [
@@ -766,25 +766,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 2284,
+                      "id": 2525,
                       "name": "idToUri",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1341,
+                      "referencedDeclaration": 1582,
                       "src": "388:7:21",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                         "typeString": "mapping(uint256 => string storage ref)"
                       }
                     },
-                    "id": 2286,
+                    "id": 2527,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 2285,
+                      "id": 2526,
                       "name": "_tokenId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2279,
+                      "referencedDeclaration": 2520,
                       "src": "396:8:21",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -802,30 +802,30 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 2283,
-                  "id": 2287,
+                  "functionReturnParameters": 2524,
+                  "id": 2528,
                   "nodeType": "Return",
                   "src": "381:24:21"
                 }
               ]
             },
             "documentation": null,
-            "id": 2289,
+            "id": 2530,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "checkUri",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2280,
+              "id": 2521,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2279,
+                  "id": 2520,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2289,
+                  "scope": 2530,
                   "src": "302:16:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -834,7 +834,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2278,
+                    "id": 2519,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "302:7:21",
@@ -850,15 +850,15 @@
               "src": "296:26:21"
             },
             "returnParameters": {
-              "id": 2283,
+              "id": 2524,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2282,
+                  "id": 2523,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2289,
+                  "scope": 2530,
                   "src": "358:13:21",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -867,7 +867,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2281,
+                    "id": 2522,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "358:6:21",
@@ -882,14 +882,14 @@
               ],
               "src": "357:15:21"
             },
-            "scope": 2290,
+            "scope": 2531,
             "src": "279:131:21",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2291,
+        "scope": 2532,
         "src": "86:327:21"
       }
     ],
@@ -899,14 +899,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/tests/mocks/nf-token-metadata-test-mock.sol",
     "exportedSymbols": {
       "NFTokenMetadataTestMock": [
-        2290
+        2531
       ]
     },
-    "id": 2291,
+    "id": 2532,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2262,
+        "id": 2503,
         "literals": [
           "solidity",
           "^",
@@ -919,10 +919,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/mocks/nf-token-metadata-mock.sol",
         "file": "../../contracts/mocks/nf-token-metadata-mock.sol",
-        "id": 2263,
+        "id": 2504,
         "nodeType": "ImportDirective",
-        "scope": 2291,
-        "sourceUnit": 781,
+        "scope": 2532,
+        "sourceUnit": 1022,
         "src": "26:58:21",
         "symbolAliases": [],
         "unitAlias": ""
@@ -933,58 +933,58 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2264,
+              "id": 2505,
               "name": "NFTokenMetadataMock",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 780,
+              "referencedDeclaration": 1021,
               "src": "124:19:21",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_NFTokenMetadataMock_$780",
+                "typeIdentifier": "t_contract$_NFTokenMetadataMock_$1021",
                 "typeString": "contract NFTokenMetadataMock"
               }
             },
-            "id": 2265,
+            "id": 2506,
             "nodeType": "InheritanceSpecifier",
             "src": "124:19:21"
           }
         ],
         "contractDependencies": [
-          780,
-          870,
-          914,
-          1030,
-          1431,
-          2108,
-          2148,
-          2180
+          1021,
+          1111,
+          1155,
+          1271,
+          1672,
+          2349,
+          2389,
+          2421
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2290,
+        "id": 2531,
         "linearizedBaseContracts": [
-          2290,
-          780,
-          870,
-          1431,
-          914,
-          2108,
-          2180,
-          2148,
-          1030
+          2531,
+          1021,
+          1111,
+          1672,
+          1155,
+          2349,
+          2421,
+          2389,
+          1271
         ],
         "name": "NFTokenMetadataTestMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2276,
+              "id": 2517,
               "nodeType": "Block",
               "src": "270:5:21",
               "statements": []
             },
             "documentation": null,
-            "id": 2277,
+            "id": 2518,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -992,11 +992,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 2272,
+                    "id": 2513,
                     "name": "_name",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2267,
+                    "referencedDeclaration": 2508,
                     "src": "252:5:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -1005,11 +1005,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2273,
+                    "id": 2514,
                     "name": "_symbol",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2269,
+                    "referencedDeclaration": 2510,
                     "src": "259:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -1017,17 +1017,17 @@
                     }
                   }
                 ],
-                "id": 2274,
+                "id": 2515,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 2271,
+                  "id": 2512,
                   "name": "NFTokenMetadataMock",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 780,
+                  "referencedDeclaration": 1021,
                   "src": "232:19:21",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_NFTokenMetadataMock_$780_$",
+                    "typeIdentifier": "t_type$_t_contract$_NFTokenMetadataMock_$1021_$",
                     "typeString": "type(contract NFTokenMetadataMock)"
                   }
                 },
@@ -1038,15 +1038,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2270,
+              "id": 2511,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2267,
+                  "id": 2508,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2277,
+                  "scope": 2518,
                   "src": "166:19:21",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1055,7 +1055,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2266,
+                    "id": 2507,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "166:6:21",
@@ -1069,10 +1069,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2269,
+                  "id": 2510,
                   "name": "_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2277,
+                  "scope": 2518,
                   "src": "191:21:21",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1081,7 +1081,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2268,
+                    "id": 2509,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "191:6:21",
@@ -1097,12 +1097,12 @@
               "src": "160:56:21"
             },
             "returnParameters": {
-              "id": 2275,
+              "id": 2516,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "270:0:21"
             },
-            "scope": 2290,
+            "scope": 2531,
             "src": "149:126:21",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1110,7 +1110,7 @@
           },
           {
             "body": {
-              "id": 2288,
+              "id": 2529,
               "nodeType": "Block",
               "src": "375:35:21",
               "statements": [
@@ -1119,25 +1119,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 2284,
+                      "id": 2525,
                       "name": "idToUri",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1341,
+                      "referencedDeclaration": 1582,
                       "src": "388:7:21",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                         "typeString": "mapping(uint256 => string storage ref)"
                       }
                     },
-                    "id": 2286,
+                    "id": 2527,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 2285,
+                      "id": 2526,
                       "name": "_tokenId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2279,
+                      "referencedDeclaration": 2520,
                       "src": "396:8:21",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1155,30 +1155,30 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 2283,
-                  "id": 2287,
+                  "functionReturnParameters": 2524,
+                  "id": 2528,
                   "nodeType": "Return",
                   "src": "381:24:21"
                 }
               ]
             },
             "documentation": null,
-            "id": 2289,
+            "id": 2530,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "checkUri",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2280,
+              "id": 2521,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2279,
+                  "id": 2520,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2289,
+                  "scope": 2530,
                   "src": "302:16:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1187,7 +1187,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2278,
+                    "id": 2519,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "302:7:21",
@@ -1203,15 +1203,15 @@
               "src": "296:26:21"
             },
             "returnParameters": {
-              "id": 2283,
+              "id": 2524,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2282,
+                  "id": 2523,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2289,
+                  "scope": 2530,
                   "src": "358:13:21",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1220,7 +1220,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2281,
+                    "id": 2522,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "358:6:21",
@@ -1235,14 +1235,14 @@
               ],
               "src": "357:15:21"
             },
-            "scope": 2290,
+            "scope": 2531,
             "src": "279:131:21",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2291,
+        "scope": 2532,
         "src": "86:327:21"
       }
     ],
@@ -1254,7 +1254,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-01-02T23:03:20.890Z",
+  "updatedAt": "2020-01-15T03:07:36.017Z",
   "devdoc": {
     "methods": {
       "approve(address,uint256)": {

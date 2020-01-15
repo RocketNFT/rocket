@@ -437,14 +437,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/mocks/nf-token-mock.sol",
     "exportedSymbols": {
       "NFTokenMock": [
-        806
+        1047
       ]
     },
-    "id": 807,
+    "id": 1048,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 782,
+        "id": 1023,
         "literals": [
           "solidity",
           "^",
@@ -457,10 +457,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/nf-token.sol",
         "file": "../../contracts/tokens/nf-token.sol",
-        "id": 783,
+        "id": 1024,
         "nodeType": "ImportDirective",
-        "scope": 807,
-        "sourceUnit": 2109,
+        "scope": 1048,
+        "sourceUnit": 2350,
         "src": "26:45:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -468,10 +468,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/ownership/ownable.sol",
         "file": "../ownership/ownable.sol",
-        "id": 784,
+        "id": 1025,
         "nodeType": "ImportDirective",
-        "scope": 807,
-        "sourceUnit": 871,
+        "scope": 1048,
+        "sourceUnit": 1112,
         "src": "72:34:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -482,17 +482,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 785,
+              "id": 1026,
               "name": "NFToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2108,
+              "referencedDeclaration": 2349,
               "src": "205:7:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_NFToken_$2108",
+                "typeIdentifier": "t_contract$_NFToken_$2349",
                 "typeString": "contract NFToken"
               }
             },
-            "id": 786,
+            "id": 1027,
             "nodeType": "InheritanceSpecifier",
             "src": "205:7:7"
           },
@@ -500,46 +500,46 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 787,
+              "id": 1028,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 870,
+              "referencedDeclaration": 1111,
               "src": "216:7:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$870",
+                "typeIdentifier": "t_contract$_Ownable_$1111",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 788,
+            "id": 1029,
             "nodeType": "InheritanceSpecifier",
             "src": "216:7:7"
           }
         ],
         "contractDependencies": [
-          870,
-          1030,
-          2108,
-          2148,
-          2180
+          1111,
+          1271,
+          2349,
+          2389,
+          2421
         ],
         "contractKind": "contract",
         "documentation": "@dev This is an example contract implementation of NFToken.",
         "fullyImplemented": true,
-        "id": 806,
+        "id": 1047,
         "linearizedBaseContracts": [
-          806,
-          870,
-          2108,
-          2180,
-          2148,
-          1030
+          1047,
+          1111,
+          2349,
+          2421,
+          2389,
+          1271
         ],
         "name": "NFTokenMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 804,
+              "id": 1045,
               "nodeType": "Block",
               "src": "476:37:7",
               "statements": [
@@ -549,11 +549,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 800,
+                        "id": 1041,
                         "name": "_to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 790,
+                        "referencedDeclaration": 1031,
                         "src": "494:3:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -562,11 +562,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 801,
+                        "id": 1042,
                         "name": "_tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 792,
+                        "referencedDeclaration": 1033,
                         "src": "499:8:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -587,32 +587,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 797,
+                        "id": 1038,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2410,
+                        "referencedDeclaration": 2651,
                         "src": "482:5:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_NFTokenMock_$806",
+                          "typeIdentifier": "t_super$_NFTokenMock_$1047",
                           "typeString": "contract super NFTokenMock"
                         }
                       },
-                      "id": 799,
+                      "id": 1040,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_mint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1868,
+                      "referencedDeclaration": 2109,
                       "src": "482:11:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 802,
+                    "id": 1043,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -626,27 +626,27 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 803,
+                  "id": 1044,
                   "nodeType": "ExpressionStatement",
                   "src": "482:26:7"
                 }
               ]
             },
             "documentation": "@dev Mints a new NFT.\n@param _to The address that will own the minted NFT.\n@param _tokenId of the NFT to be minted by the msg.sender.",
-            "id": 805,
+            "id": 1046,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 795,
+                "id": 1036,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 794,
+                  "id": 1035,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 843,
+                  "referencedDeclaration": 1084,
                   "src": "464:9:7",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -660,15 +660,15 @@
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 793,
+              "id": 1034,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 790,
+                  "id": 1031,
                   "name": "_to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 805,
+                  "scope": 1046,
                   "src": "409:11:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -677,7 +677,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 789,
+                    "id": 1030,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "409:7:7",
@@ -692,10 +692,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 792,
+                  "id": 1033,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 805,
+                  "scope": 1046,
                   "src": "426:16:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -704,7 +704,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 791,
+                    "id": 1032,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "426:7:7",
@@ -720,19 +720,19 @@
               "src": "403:43:7"
             },
             "returnParameters": {
-              "id": 796,
+              "id": 1037,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "476:0:7"
             },
-            "scope": 806,
+            "scope": 1047,
             "src": "390:123:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 807,
+        "scope": 1048,
         "src": "179:337:7"
       }
     ],
@@ -742,14 +742,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/mocks/nf-token-mock.sol",
     "exportedSymbols": {
       "NFTokenMock": [
-        806
+        1047
       ]
     },
-    "id": 807,
+    "id": 1048,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 782,
+        "id": 1023,
         "literals": [
           "solidity",
           "^",
@@ -762,10 +762,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/nf-token.sol",
         "file": "../../contracts/tokens/nf-token.sol",
-        "id": 783,
+        "id": 1024,
         "nodeType": "ImportDirective",
-        "scope": 807,
-        "sourceUnit": 2109,
+        "scope": 1048,
+        "sourceUnit": 2350,
         "src": "26:45:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -773,10 +773,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/ownership/ownable.sol",
         "file": "../ownership/ownable.sol",
-        "id": 784,
+        "id": 1025,
         "nodeType": "ImportDirective",
-        "scope": 807,
-        "sourceUnit": 871,
+        "scope": 1048,
+        "sourceUnit": 1112,
         "src": "72:34:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -787,17 +787,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 785,
+              "id": 1026,
               "name": "NFToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2108,
+              "referencedDeclaration": 2349,
               "src": "205:7:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_NFToken_$2108",
+                "typeIdentifier": "t_contract$_NFToken_$2349",
                 "typeString": "contract NFToken"
               }
             },
-            "id": 786,
+            "id": 1027,
             "nodeType": "InheritanceSpecifier",
             "src": "205:7:7"
           },
@@ -805,46 +805,46 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 787,
+              "id": 1028,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 870,
+              "referencedDeclaration": 1111,
               "src": "216:7:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$870",
+                "typeIdentifier": "t_contract$_Ownable_$1111",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 788,
+            "id": 1029,
             "nodeType": "InheritanceSpecifier",
             "src": "216:7:7"
           }
         ],
         "contractDependencies": [
-          870,
-          1030,
-          2108,
-          2148,
-          2180
+          1111,
+          1271,
+          2349,
+          2389,
+          2421
         ],
         "contractKind": "contract",
         "documentation": "@dev This is an example contract implementation of NFToken.",
         "fullyImplemented": true,
-        "id": 806,
+        "id": 1047,
         "linearizedBaseContracts": [
-          806,
-          870,
-          2108,
-          2180,
-          2148,
-          1030
+          1047,
+          1111,
+          2349,
+          2421,
+          2389,
+          1271
         ],
         "name": "NFTokenMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 804,
+              "id": 1045,
               "nodeType": "Block",
               "src": "476:37:7",
               "statements": [
@@ -854,11 +854,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 800,
+                        "id": 1041,
                         "name": "_to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 790,
+                        "referencedDeclaration": 1031,
                         "src": "494:3:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -867,11 +867,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 801,
+                        "id": 1042,
                         "name": "_tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 792,
+                        "referencedDeclaration": 1033,
                         "src": "499:8:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -892,32 +892,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 797,
+                        "id": 1038,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2410,
+                        "referencedDeclaration": 2651,
                         "src": "482:5:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_NFTokenMock_$806",
+                          "typeIdentifier": "t_super$_NFTokenMock_$1047",
                           "typeString": "contract super NFTokenMock"
                         }
                       },
-                      "id": 799,
+                      "id": 1040,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_mint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1868,
+                      "referencedDeclaration": 2109,
                       "src": "482:11:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 802,
+                    "id": 1043,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -931,27 +931,27 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 803,
+                  "id": 1044,
                   "nodeType": "ExpressionStatement",
                   "src": "482:26:7"
                 }
               ]
             },
             "documentation": "@dev Mints a new NFT.\n@param _to The address that will own the minted NFT.\n@param _tokenId of the NFT to be minted by the msg.sender.",
-            "id": 805,
+            "id": 1046,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 795,
+                "id": 1036,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 794,
+                  "id": 1035,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 843,
+                  "referencedDeclaration": 1084,
                   "src": "464:9:7",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -965,15 +965,15 @@
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 793,
+              "id": 1034,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 790,
+                  "id": 1031,
                   "name": "_to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 805,
+                  "scope": 1046,
                   "src": "409:11:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -982,7 +982,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 789,
+                    "id": 1030,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "409:7:7",
@@ -997,10 +997,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 792,
+                  "id": 1033,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 805,
+                  "scope": 1046,
                   "src": "426:16:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1009,7 +1009,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 791,
+                    "id": 1032,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "426:7:7",
@@ -1025,19 +1025,19 @@
               "src": "403:43:7"
             },
             "returnParameters": {
-              "id": 796,
+              "id": 1037,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "476:0:7"
             },
-            "scope": 806,
+            "scope": 1047,
             "src": "390:123:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 807,
+        "scope": 1048,
         "src": "179:337:7"
       }
     ],
@@ -1049,7 +1049,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-01-02T23:03:20.819Z",
+  "updatedAt": "2020-01-15T03:07:35.967Z",
   "devdoc": {
     "details": "This is an example contract implementation of NFToken.",
     "methods": {

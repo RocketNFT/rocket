@@ -64,14 +64,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/erc721-metadata.sol",
     "exportedSymbols": {
       "ERC721Metadata": [
-        914
+        1155
       ]
     },
-    "id": 915,
+    "id": 1156,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 896,
+        "id": 1137,
         "literals": [
           "solidity",
           "^",
@@ -87,9 +87,9 @@
         "contractKind": "interface",
         "documentation": "@dev Optional metadata extension for ERC-721 non-fungible token standard.\nSee https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md.",
         "fullyImplemented": false,
-        "id": 914,
+        "id": 1155,
         "linearizedBaseContracts": [
-          914
+          1155
         ],
         "name": "ERC721Metadata",
         "nodeType": "ContractDefinition",
@@ -97,28 +97,28 @@
           {
             "body": null,
             "documentation": "@dev Returns a descriptive name for a collection of NFTs in this contract.\n@return Representing name. ",
-            "id": 901,
+            "id": 1142,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "name",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 897,
+              "id": 1138,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "348:2:10"
             },
             "returnParameters": {
-              "id": 900,
+              "id": 1141,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 899,
+                  "id": 1140,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 901,
+                  "scope": 1142,
                   "src": "386:19:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -127,7 +127,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 898,
+                    "id": 1139,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "386:6:10",
@@ -142,7 +142,7 @@
               ],
               "src": "385:21:10"
             },
-            "scope": 914,
+            "scope": 1155,
             "src": "335:72:10",
             "stateMutability": "view",
             "superFunction": null,
@@ -151,28 +151,28 @@
           {
             "body": null,
             "documentation": "@dev Returns a abbreviated name for a collection of NFTs in this contract.\n@return Representing symbol. ",
-            "id": 906,
+            "id": 1147,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "symbol",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 902,
+              "id": 1143,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "553:2:10"
             },
             "returnParameters": {
-              "id": 905,
+              "id": 1146,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 904,
+                  "id": 1145,
                   "name": "_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 906,
+                  "scope": 1147,
                   "src": "591:21:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -181,7 +181,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 903,
+                    "id": 1144,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "591:6:10",
@@ -196,7 +196,7 @@
               ],
               "src": "590:23:10"
             },
-            "scope": 914,
+            "scope": 1155,
             "src": "538:76:10",
             "stateMutability": "view",
             "superFunction": null,
@@ -205,22 +205,22 @@
           {
             "body": null,
             "documentation": "@dev Returns a distinct Uniform Resource Identifier (URI) for a given asset. It Throws if\n`_tokenId` is not a valid NFT. URIs are defined in RFC3986. The URI may point to a JSON file\nthat conforms to the \"ERC721 Metadata JSON Schema\".\n@return URI of _tokenId.",
-            "id": 913,
+            "id": 1154,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "tokenURI",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 909,
+              "id": 1150,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 908,
+                  "id": 1149,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 913,
+                  "scope": 1154,
                   "src": "928:16:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -229,7 +229,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 907,
+                    "id": 1148,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "928:7:10",
@@ -245,15 +245,15 @@
               "src": "927:18:10"
             },
             "returnParameters": {
-              "id": 912,
+              "id": 1153,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 911,
+                  "id": 1152,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 913,
+                  "scope": 1154,
                   "src": "981:13:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -262,7 +262,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 910,
+                    "id": 1151,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "981:6:10",
@@ -277,14 +277,14 @@
               ],
               "src": "980:15:10"
             },
-            "scope": 914,
+            "scope": 1155,
             "src": "910:86:10",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 915,
+        "scope": 1156,
         "src": "180:819:10"
       }
     ],
@@ -294,14 +294,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/erc721-metadata.sol",
     "exportedSymbols": {
       "ERC721Metadata": [
-        914
+        1155
       ]
     },
-    "id": 915,
+    "id": 1156,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 896,
+        "id": 1137,
         "literals": [
           "solidity",
           "^",
@@ -317,9 +317,9 @@
         "contractKind": "interface",
         "documentation": "@dev Optional metadata extension for ERC-721 non-fungible token standard.\nSee https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md.",
         "fullyImplemented": false,
-        "id": 914,
+        "id": 1155,
         "linearizedBaseContracts": [
-          914
+          1155
         ],
         "name": "ERC721Metadata",
         "nodeType": "ContractDefinition",
@@ -327,28 +327,28 @@
           {
             "body": null,
             "documentation": "@dev Returns a descriptive name for a collection of NFTs in this contract.\n@return Representing name. ",
-            "id": 901,
+            "id": 1142,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "name",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 897,
+              "id": 1138,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "348:2:10"
             },
             "returnParameters": {
-              "id": 900,
+              "id": 1141,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 899,
+                  "id": 1140,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 901,
+                  "scope": 1142,
                   "src": "386:19:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -357,7 +357,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 898,
+                    "id": 1139,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "386:6:10",
@@ -372,7 +372,7 @@
               ],
               "src": "385:21:10"
             },
-            "scope": 914,
+            "scope": 1155,
             "src": "335:72:10",
             "stateMutability": "view",
             "superFunction": null,
@@ -381,28 +381,28 @@
           {
             "body": null,
             "documentation": "@dev Returns a abbreviated name for a collection of NFTs in this contract.\n@return Representing symbol. ",
-            "id": 906,
+            "id": 1147,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "symbol",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 902,
+              "id": 1143,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "553:2:10"
             },
             "returnParameters": {
-              "id": 905,
+              "id": 1146,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 904,
+                  "id": 1145,
                   "name": "_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 906,
+                  "scope": 1147,
                   "src": "591:21:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -411,7 +411,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 903,
+                    "id": 1144,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "591:6:10",
@@ -426,7 +426,7 @@
               ],
               "src": "590:23:10"
             },
-            "scope": 914,
+            "scope": 1155,
             "src": "538:76:10",
             "stateMutability": "view",
             "superFunction": null,
@@ -435,22 +435,22 @@
           {
             "body": null,
             "documentation": "@dev Returns a distinct Uniform Resource Identifier (URI) for a given asset. It Throws if\n`_tokenId` is not a valid NFT. URIs are defined in RFC3986. The URI may point to a JSON file\nthat conforms to the \"ERC721 Metadata JSON Schema\".\n@return URI of _tokenId.",
-            "id": 913,
+            "id": 1154,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "tokenURI",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 909,
+              "id": 1150,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 908,
+                  "id": 1149,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 913,
+                  "scope": 1154,
                   "src": "928:16:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -459,7 +459,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 907,
+                    "id": 1148,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "928:7:10",
@@ -475,15 +475,15 @@
               "src": "927:18:10"
             },
             "returnParameters": {
-              "id": 912,
+              "id": 1153,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 911,
+                  "id": 1152,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 913,
+                  "scope": 1154,
                   "src": "981:13:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -492,7 +492,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 910,
+                    "id": 1151,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "981:6:10",
@@ -507,14 +507,14 @@
               ],
               "src": "980:15:10"
             },
-            "scope": 914,
+            "scope": 1155,
             "src": "910:86:10",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 915,
+        "scope": 1156,
         "src": "180:819:10"
       }
     ],
@@ -526,7 +526,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-01-02T23:03:20.828Z",
+  "updatedAt": "2020-01-15T03:07:35.970Z",
   "devdoc": {
     "details": "Optional metadata extension for ERC-721 non-fungible token standard. See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md.",
     "methods": {

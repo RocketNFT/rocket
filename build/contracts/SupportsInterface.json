@@ -40,14 +40,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/utils/supports-interface.sol",
     "exportedSymbols": {
       "SupportsInterface": [
-        2180
+        2421
       ]
     },
-    "id": 2181,
+    "id": 2422,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2150,
+        "id": 2391,
         "literals": [
           "solidity",
           "^",
@@ -60,10 +60,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/utils/erc165.sol",
         "file": "./erc165.sol",
-        "id": 2151,
+        "id": 2392,
         "nodeType": "ImportDirective",
-        "scope": 2181,
-        "sourceUnit": 2149,
+        "scope": 2422,
+        "sourceUnit": 2390,
         "src": "26:22:18",
         "symbolAliases": [],
         "unitAlias": ""
@@ -74,41 +74,41 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2152,
+              "id": 2393,
               "name": "ERC165",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2148,
+              "referencedDeclaration": 2389,
               "src": "163:6:18",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC165_$2148",
+                "typeIdentifier": "t_contract$_ERC165_$2389",
                 "typeString": "contract ERC165"
               }
             },
-            "id": 2153,
+            "id": 2394,
             "nodeType": "InheritanceSpecifier",
             "src": "163:6:18"
           }
         ],
         "contractDependencies": [
-          2148
+          2389
         ],
         "contractKind": "contract",
         "documentation": "@dev Implementation of standard for detect smart contract interfaces.",
         "fullyImplemented": true,
-        "id": 2180,
+        "id": 2421,
         "linearizedBaseContracts": [
-          2180,
-          2148
+          2421,
+          2389
         ],
         "name": "SupportsInterface",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 2157,
+            "id": 2398,
             "name": "supportedInterfaces",
             "nodeType": "VariableDeclaration",
-            "scope": 2180,
+            "scope": 2421,
             "src": "288:52:18",
             "stateVariable": true,
             "storageLocation": "default",
@@ -117,9 +117,9 @@
               "typeString": "mapping(bytes4 => bool)"
             },
             "typeName": {
-              "id": 2156,
+              "id": 2397,
               "keyType": {
-                "id": 2154,
+                "id": 2395,
                 "name": "bytes4",
                 "nodeType": "ElementaryTypeName",
                 "src": "296:6:18",
@@ -135,7 +135,7 @@
                 "typeString": "mapping(bytes4 => bool)"
               },
               "valueType": {
-                "id": 2155,
+                "id": 2396,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "306:4:18",
@@ -150,14 +150,14 @@
           },
           {
             "body": {
-              "id": 2166,
+              "id": 2407,
               "nodeType": "Block",
               "src": "417:59:18",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2164,
+                    "id": 2405,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -166,22 +166,22 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 2160,
+                        "id": 2401,
                         "name": "supportedInterfaces",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2157,
+                        "referencedDeclaration": 2398,
                         "src": "423:19:18",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
                           "typeString": "mapping(bytes4 => bool)"
                         }
                       },
-                      "id": 2162,
+                      "id": 2403,
                       "indexExpression": {
                         "argumentTypes": null,
                         "hexValue": "30783031666663396137",
-                        "id": 2161,
+                        "id": 2402,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -212,7 +212,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 2163,
+                      "id": 2404,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -233,32 +233,32 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 2165,
+                  "id": 2406,
                   "nodeType": "ExpressionStatement",
                   "src": "423:38:18"
                 }
               ]
             },
             "documentation": "@dev Contract constructor.",
-            "id": 2167,
+            "id": 2408,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2158,
+              "id": 2399,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "400:2:18"
             },
             "returnParameters": {
-              "id": 2159,
+              "id": 2400,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "417:0:18"
             },
-            "scope": 2180,
+            "scope": 2421,
             "src": "389:87:18",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -266,7 +266,7 @@
           },
           {
             "body": {
-              "id": 2178,
+              "id": 2419,
               "nodeType": "Block",
               "src": "778:51:18",
               "statements": [
@@ -275,25 +275,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 2174,
+                      "id": 2415,
                       "name": "supportedInterfaces",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2157,
+                      "referencedDeclaration": 2398,
                       "src": "791:19:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
                         "typeString": "mapping(bytes4 => bool)"
                       }
                     },
-                    "id": 2176,
+                    "id": 2417,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 2175,
+                      "id": 2416,
                       "name": "_interfaceID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2169,
+                      "referencedDeclaration": 2410,
                       "src": "811:12:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes4",
@@ -311,30 +311,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 2173,
-                  "id": 2177,
+                  "functionReturnParameters": 2414,
+                  "id": 2418,
                   "nodeType": "Return",
                   "src": "784:40:18"
                 }
               ]
             },
             "documentation": "@dev Function to check which interfaces are suported by this contract.\n@param _interfaceID Id of the interface.\n@return True if _interfaceID is supported, false otherwise.",
-            "id": 2179,
+            "id": 2420,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "supportsInterface",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2170,
+              "id": 2411,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2169,
+                  "id": 2410,
                   "name": "_interfaceID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2179,
+                  "scope": 2420,
                   "src": "711:19:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -343,7 +343,7 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 2168,
+                    "id": 2409,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
                     "src": "711:6:18",
@@ -359,15 +359,15 @@
               "src": "705:29:18"
             },
             "returnParameters": {
-              "id": 2173,
+              "id": 2414,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2172,
+                  "id": 2413,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2179,
+                  "scope": 2420,
                   "src": "770:4:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -376,7 +376,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2171,
+                    "id": 2412,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "770:4:18",
@@ -391,14 +391,14 @@
               ],
               "src": "769:6:18"
             },
-            "scope": 2180,
+            "scope": 2421,
             "src": "679:150:18",
             "stateMutability": "view",
-            "superFunction": 2147,
+            "superFunction": 2388,
             "visibility": "external"
           }
         ],
-        "scope": 2181,
+        "scope": 2422,
         "src": "131:701:18"
       }
     ],
@@ -408,14 +408,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/utils/supports-interface.sol",
     "exportedSymbols": {
       "SupportsInterface": [
-        2180
+        2421
       ]
     },
-    "id": 2181,
+    "id": 2422,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2150,
+        "id": 2391,
         "literals": [
           "solidity",
           "^",
@@ -428,10 +428,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/utils/erc165.sol",
         "file": "./erc165.sol",
-        "id": 2151,
+        "id": 2392,
         "nodeType": "ImportDirective",
-        "scope": 2181,
-        "sourceUnit": 2149,
+        "scope": 2422,
+        "sourceUnit": 2390,
         "src": "26:22:18",
         "symbolAliases": [],
         "unitAlias": ""
@@ -442,41 +442,41 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2152,
+              "id": 2393,
               "name": "ERC165",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2148,
+              "referencedDeclaration": 2389,
               "src": "163:6:18",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC165_$2148",
+                "typeIdentifier": "t_contract$_ERC165_$2389",
                 "typeString": "contract ERC165"
               }
             },
-            "id": 2153,
+            "id": 2394,
             "nodeType": "InheritanceSpecifier",
             "src": "163:6:18"
           }
         ],
         "contractDependencies": [
-          2148
+          2389
         ],
         "contractKind": "contract",
         "documentation": "@dev Implementation of standard for detect smart contract interfaces.",
         "fullyImplemented": true,
-        "id": 2180,
+        "id": 2421,
         "linearizedBaseContracts": [
-          2180,
-          2148
+          2421,
+          2389
         ],
         "name": "SupportsInterface",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 2157,
+            "id": 2398,
             "name": "supportedInterfaces",
             "nodeType": "VariableDeclaration",
-            "scope": 2180,
+            "scope": 2421,
             "src": "288:52:18",
             "stateVariable": true,
             "storageLocation": "default",
@@ -485,9 +485,9 @@
               "typeString": "mapping(bytes4 => bool)"
             },
             "typeName": {
-              "id": 2156,
+              "id": 2397,
               "keyType": {
-                "id": 2154,
+                "id": 2395,
                 "name": "bytes4",
                 "nodeType": "ElementaryTypeName",
                 "src": "296:6:18",
@@ -503,7 +503,7 @@
                 "typeString": "mapping(bytes4 => bool)"
               },
               "valueType": {
-                "id": 2155,
+                "id": 2396,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "306:4:18",
@@ -518,14 +518,14 @@
           },
           {
             "body": {
-              "id": 2166,
+              "id": 2407,
               "nodeType": "Block",
               "src": "417:59:18",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2164,
+                    "id": 2405,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -534,22 +534,22 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 2160,
+                        "id": 2401,
                         "name": "supportedInterfaces",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2157,
+                        "referencedDeclaration": 2398,
                         "src": "423:19:18",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
                           "typeString": "mapping(bytes4 => bool)"
                         }
                       },
-                      "id": 2162,
+                      "id": 2403,
                       "indexExpression": {
                         "argumentTypes": null,
                         "hexValue": "30783031666663396137",
-                        "id": 2161,
+                        "id": 2402,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -580,7 +580,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 2163,
+                      "id": 2404,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -601,32 +601,32 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 2165,
+                  "id": 2406,
                   "nodeType": "ExpressionStatement",
                   "src": "423:38:18"
                 }
               ]
             },
             "documentation": "@dev Contract constructor.",
-            "id": 2167,
+            "id": 2408,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2158,
+              "id": 2399,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "400:2:18"
             },
             "returnParameters": {
-              "id": 2159,
+              "id": 2400,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "417:0:18"
             },
-            "scope": 2180,
+            "scope": 2421,
             "src": "389:87:18",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -634,7 +634,7 @@
           },
           {
             "body": {
-              "id": 2178,
+              "id": 2419,
               "nodeType": "Block",
               "src": "778:51:18",
               "statements": [
@@ -643,25 +643,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 2174,
+                      "id": 2415,
                       "name": "supportedInterfaces",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2157,
+                      "referencedDeclaration": 2398,
                       "src": "791:19:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
                         "typeString": "mapping(bytes4 => bool)"
                       }
                     },
-                    "id": 2176,
+                    "id": 2417,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 2175,
+                      "id": 2416,
                       "name": "_interfaceID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2169,
+                      "referencedDeclaration": 2410,
                       "src": "811:12:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes4",
@@ -679,30 +679,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 2173,
-                  "id": 2177,
+                  "functionReturnParameters": 2414,
+                  "id": 2418,
                   "nodeType": "Return",
                   "src": "784:40:18"
                 }
               ]
             },
             "documentation": "@dev Function to check which interfaces are suported by this contract.\n@param _interfaceID Id of the interface.\n@return True if _interfaceID is supported, false otherwise.",
-            "id": 2179,
+            "id": 2420,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "supportsInterface",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2170,
+              "id": 2411,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2169,
+                  "id": 2410,
                   "name": "_interfaceID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2179,
+                  "scope": 2420,
                   "src": "711:19:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -711,7 +711,7 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 2168,
+                    "id": 2409,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
                     "src": "711:6:18",
@@ -727,15 +727,15 @@
               "src": "705:29:18"
             },
             "returnParameters": {
-              "id": 2173,
+              "id": 2414,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2172,
+                  "id": 2413,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2179,
+                  "scope": 2420,
                   "src": "770:4:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -744,7 +744,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2171,
+                    "id": 2412,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "770:4:18",
@@ -759,14 +759,14 @@
               ],
               "src": "769:6:18"
             },
-            "scope": 2180,
+            "scope": 2421,
             "src": "679:150:18",
             "stateMutability": "view",
-            "superFunction": 2147,
+            "superFunction": 2388,
             "visibility": "external"
           }
         ],
-        "scope": 2181,
+        "scope": 2422,
         "src": "131:701:18"
       }
     ],
@@ -778,7 +778,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-01-02T23:03:20.882Z",
+  "updatedAt": "2020-01-15T03:07:36.004Z",
   "devdoc": {
     "details": "Implementation of standard for detect smart contract interfaces.",
     "methods": {

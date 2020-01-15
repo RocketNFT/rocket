@@ -395,14 +395,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/nf-token-metadata.sol",
     "exportedSymbols": {
       "NFTokenMetadata": [
-        1431
+        1672
       ]
     },
-    "id": 1432,
+    "id": 1673,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1327,
+        "id": 1568,
         "literals": [
           "solidity",
           "^",
@@ -415,10 +415,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/nf-token.sol",
         "file": "./nf-token.sol",
-        "id": 1328,
+        "id": 1569,
         "nodeType": "ImportDirective",
-        "scope": 1432,
-        "sourceUnit": 2109,
+        "scope": 1673,
+        "sourceUnit": 2350,
         "src": "26:24:14",
         "symbolAliases": [],
         "unitAlias": ""
@@ -426,10 +426,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/erc721-metadata.sol",
         "file": "./erc721-metadata.sol",
-        "id": 1329,
+        "id": 1570,
         "nodeType": "ImportDirective",
-        "scope": 1432,
-        "sourceUnit": 915,
+        "scope": 1673,
+        "sourceUnit": 1156,
         "src": "51:31:14",
         "symbolAliases": [],
         "unitAlias": ""
@@ -440,17 +440,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1330,
+              "id": 1571,
               "name": "NFToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2108,
+              "referencedDeclaration": 2349,
               "src": "204:7:14",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_NFToken_$2108",
+                "typeIdentifier": "t_contract$_NFToken_$2349",
                 "typeString": "contract NFToken"
               }
             },
-            "id": 1331,
+            "id": 1572,
             "nodeType": "InheritanceSpecifier",
             "src": "204:7:14"
           },
@@ -458,49 +458,49 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1332,
+              "id": 1573,
               "name": "ERC721Metadata",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 914,
+              "referencedDeclaration": 1155,
               "src": "215:14:14",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Metadata_$914",
+                "typeIdentifier": "t_contract$_ERC721Metadata_$1155",
                 "typeString": "contract ERC721Metadata"
               }
             },
-            "id": 1333,
+            "id": 1574,
             "nodeType": "InheritanceSpecifier",
             "src": "215:14:14"
           }
         ],
         "contractDependencies": [
-          914,
-          1030,
-          2108,
-          2148,
-          2180
+          1155,
+          1271,
+          2349,
+          2389,
+          2421
         ],
         "contractKind": "contract",
         "documentation": "@dev Optional metadata implementation for ERC-721 non-fungible token standard.",
         "fullyImplemented": true,
-        "id": 1431,
+        "id": 1672,
         "linearizedBaseContracts": [
-          1431,
-          914,
-          2108,
-          2180,
-          2148,
-          1030
+          1672,
+          1155,
+          2349,
+          2421,
+          2389,
+          1271
         ],
         "name": "NFTokenMetadata",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1335,
+            "id": 1576,
             "name": "nftName",
             "nodeType": "VariableDeclaration",
-            "scope": 1431,
+            "scope": 1672,
             "src": "302:23:14",
             "stateVariable": true,
             "storageLocation": "default",
@@ -509,7 +509,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 1334,
+              "id": 1575,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "302:6:14",
@@ -523,10 +523,10 @@
           },
           {
             "constant": false,
-            "id": 1337,
+            "id": 1578,
             "name": "nftSymbol",
             "nodeType": "VariableDeclaration",
-            "scope": 1431,
+            "scope": 1672,
             "src": "386:25:14",
             "stateVariable": true,
             "storageLocation": "default",
@@ -535,7 +535,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 1336,
+              "id": 1577,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "386:6:14",
@@ -549,10 +549,10 @@
           },
           {
             "constant": false,
-            "id": 1341,
+            "id": 1582,
             "name": "idToUri",
             "nodeType": "VariableDeclaration",
-            "scope": 1431,
+            "scope": 1672,
             "src": "475:44:14",
             "stateVariable": true,
             "storageLocation": "default",
@@ -561,9 +561,9 @@
               "typeString": "mapping(uint256 => string)"
             },
             "typeName": {
-              "id": 1340,
+              "id": 1581,
               "keyType": {
-                "id": 1338,
+                "id": 1579,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "484:7:14",
@@ -579,7 +579,7 @@
                 "typeString": "mapping(uint256 => string)"
               },
               "valueType": {
-                "id": 1339,
+                "id": 1580,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "495:6:14",
@@ -594,14 +594,14 @@
           },
           {
             "body": {
-              "id": 1350,
+              "id": 1591,
               "nodeType": "Block",
               "src": "683:67:14",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1348,
+                    "id": 1589,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -610,22 +610,22 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 1344,
+                        "id": 1585,
                         "name": "supportedInterfaces",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2157,
+                        "referencedDeclaration": 2398,
                         "src": "689:19:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
                           "typeString": "mapping(bytes4 => bool)"
                         }
                       },
-                      "id": 1346,
+                      "id": 1587,
                       "indexExpression": {
                         "argumentTypes": null,
                         "hexValue": "30783562356531333966",
-                        "id": 1345,
+                        "id": 1586,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -656,7 +656,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 1347,
+                      "id": 1588,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -677,32 +677,32 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1349,
+                  "id": 1590,
                   "nodeType": "ExpressionStatement",
                   "src": "689:38:14"
                 }
               ]
             },
             "documentation": "@dev Contract constructor.\n@notice When implementing this contract don't forget to set nftName and nftSymbol.",
-            "id": 1351,
+            "id": 1592,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1342,
+              "id": 1583,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "667:2:14"
             },
             "returnParameters": {
-              "id": 1343,
+              "id": 1584,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "683:0:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "656:94:14",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -710,25 +710,25 @@
           },
           {
             "body": {
-              "id": 1360,
+              "id": 1601,
               "nodeType": "Block",
               "src": "940:26:14",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1358,
+                    "id": 1599,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1356,
+                      "id": 1597,
                       "name": "_name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1354,
+                      "referencedDeclaration": 1595,
                       "src": "946:5:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -739,11 +739,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1357,
+                      "id": 1598,
                       "name": "nftName",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1335,
+                      "referencedDeclaration": 1576,
                       "src": "954:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -756,35 +756,35 @@
                       "typeString": "string memory"
                     }
                   },
-                  "id": 1359,
+                  "id": 1600,
                   "nodeType": "ExpressionStatement",
                   "src": "946:15:14"
                 }
               ]
             },
             "documentation": "@dev Returns a descriptive name for a collection of NFTokens.\n@return Representing name. ",
-            "id": 1361,
+            "id": 1602,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "name",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1352,
+              "id": 1593,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "879:2:14"
             },
             "returnParameters": {
-              "id": 1355,
+              "id": 1596,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1354,
+                  "id": 1595,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1361,
+                  "scope": 1602,
                   "src": "917:19:14",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -793,7 +793,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1353,
+                    "id": 1594,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "917:6:14",
@@ -808,33 +808,33 @@
               ],
               "src": "916:21:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "866:100:14",
             "stateMutability": "view",
-            "superFunction": 901,
+            "superFunction": 1142,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 1370,
+              "id": 1611,
               "nodeType": "Block",
               "src": "1147:30:14",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1368,
+                    "id": 1609,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1366,
+                      "id": 1607,
                       "name": "_symbol",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1364,
+                      "referencedDeclaration": 1605,
                       "src": "1153:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -845,11 +845,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1367,
+                      "id": 1608,
                       "name": "nftSymbol",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1337,
+                      "referencedDeclaration": 1578,
                       "src": "1163:9:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -862,35 +862,35 @@
                       "typeString": "string memory"
                     }
                   },
-                  "id": 1369,
+                  "id": 1610,
                   "nodeType": "ExpressionStatement",
                   "src": "1153:19:14"
                 }
               ]
             },
             "documentation": "@dev Returns an abbreviated name for NFTokens.\n@return Representing symbol. ",
-            "id": 1371,
+            "id": 1612,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "symbol",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1362,
+              "id": 1603,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1084:2:14"
             },
             "returnParameters": {
-              "id": 1365,
+              "id": 1606,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1364,
+                  "id": 1605,
                   "name": "_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1371,
+                  "scope": 1612,
                   "src": "1122:21:14",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -899,7 +899,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1363,
+                    "id": 1604,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1122:6:14",
@@ -914,15 +914,15 @@
               ],
               "src": "1121:23:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "1069:108:14",
             "stateMutability": "view",
-            "superFunction": 906,
+            "superFunction": 1147,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 1385,
+              "id": 1626,
               "nodeType": "Block",
               "src": "1446:35:14",
               "statements": [
@@ -931,25 +931,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 1381,
+                      "id": 1622,
                       "name": "idToUri",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1341,
+                      "referencedDeclaration": 1582,
                       "src": "1459:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                         "typeString": "mapping(uint256 => string storage ref)"
                       }
                     },
-                    "id": 1383,
+                    "id": 1624,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 1382,
+                      "id": 1623,
                       "name": "_tokenId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1373,
+                      "referencedDeclaration": 1614,
                       "src": "1467:8:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -967,15 +967,15 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 1380,
-                  "id": 1384,
+                  "functionReturnParameters": 1621,
+                  "id": 1625,
                   "nodeType": "Return",
                   "src": "1452:24:14"
                 }
               ]
             },
             "documentation": "@dev A distinct URI (RFC 3986) for a given NFT.\n@param _tokenId Id for which we want uri.\n@return URI of _tokenId.",
-            "id": 1386,
+            "id": 1627,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -983,11 +983,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1376,
+                    "id": 1617,
                     "name": "_tokenId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1373,
+                    "referencedDeclaration": 1614,
                     "src": "1406:8:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -995,14 +995,14 @@
                     }
                   }
                 ],
-                "id": 1377,
+                "id": 1618,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1375,
+                  "id": 1616,
                   "name": "validNFToken",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1571,
+                  "referencedDeclaration": 1812,
                   "src": "1393:12:14",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
@@ -1016,15 +1016,15 @@
             "name": "tokenURI",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1374,
+              "id": 1615,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1373,
+                  "id": 1614,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1386,
+                  "scope": 1627,
                   "src": "1346:16:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1033,7 +1033,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1372,
+                    "id": 1613,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1346:7:14",
@@ -1049,15 +1049,15 @@
               "src": "1340:26:14"
             },
             "returnParameters": {
-              "id": 1380,
+              "id": 1621,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1379,
+                  "id": 1620,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1386,
+                  "scope": 1627,
                   "src": "1429:13:14",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1066,7 +1066,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1378,
+                    "id": 1619,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1429:6:14",
@@ -1081,15 +1081,15 @@
               ],
               "src": "1428:15:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "1323:158:14",
             "stateMutability": "view",
-            "superFunction": 913,
+            "superFunction": 1154,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 1412,
+              "id": 1653,
               "nodeType": "Block",
               "src": "1930:123:14",
               "statements": [
@@ -1099,11 +1099,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1394,
+                        "id": 1635,
                         "name": "_tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1388,
+                        "referencedDeclaration": 1629,
                         "src": "1948:8:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1120,32 +1120,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1391,
+                        "id": 1632,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2404,
+                        "referencedDeclaration": 2645,
                         "src": "1936:5:14",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_NFTokenMetadata_$1431",
+                          "typeIdentifier": "t_super$_NFTokenMetadata_$1672",
                           "typeString": "contract super NFTokenMetadata"
                         }
                       },
-                      "id": 1393,
+                      "id": 1634,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_burn",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1939,
+                      "referencedDeclaration": 2180,
                       "src": "1936:11:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 1395,
+                    "id": 1636,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1159,7 +1159,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1396,
+                  "id": 1637,
                   "nodeType": "ExpressionStatement",
                   "src": "1936:21:14"
                 },
@@ -1170,7 +1170,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1404,
+                    "id": 1645,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1184,25 +1184,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 1398,
+                              "id": 1639,
                               "name": "idToUri",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1341,
+                              "referencedDeclaration": 1582,
                               "src": "1974:7:14",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                                 "typeString": "mapping(uint256 => string storage ref)"
                               }
                             },
-                            "id": 1400,
+                            "id": 1641,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 1399,
+                              "id": 1640,
                               "name": "_tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1388,
+                              "referencedDeclaration": 1629,
                               "src": "1982:8:14",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1228,7 +1228,7 @@
                               "typeString": "string storage ref"
                             }
                           ],
-                          "id": 1397,
+                          "id": 1638,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1241,7 +1241,7 @@
                           },
                           "typeName": "bytes"
                         },
-                        "id": 1401,
+                        "id": 1642,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1255,7 +1255,7 @@
                           "typeString": "bytes storage pointer"
                         }
                       },
-                      "id": 1402,
+                      "id": 1643,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -1274,7 +1274,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 1403,
+                      "id": 1644,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1296,18 +1296,18 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 1411,
+                  "id": 1652,
                   "nodeType": "IfStatement",
                   "src": "1964:85:14",
                   "trueBody": {
-                    "id": 1410,
+                    "id": 1651,
                     "nodeType": "Block",
                     "src": "2010:39:14",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1408,
+                          "id": 1649,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1320,25 +1320,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 1405,
+                              "id": 1646,
                               "name": "idToUri",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1341,
+                              "referencedDeclaration": 1582,
                               "src": "2025:7:14",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                                 "typeString": "mapping(uint256 => string storage ref)"
                               }
                             },
-                            "id": 1407,
+                            "id": 1648,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 1406,
+                              "id": 1647,
                               "name": "_tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1388,
+                              "referencedDeclaration": 1629,
                               "src": "2033:8:14",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1361,7 +1361,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 1409,
+                        "id": 1650,
                         "nodeType": "ExpressionStatement",
                         "src": "2018:24:14"
                       }
@@ -1371,22 +1371,22 @@
               ]
             },
             "documentation": "@dev Burns a NFT.\n@notice This is an internal function which should be called from user-implemented external\nburn function. Its purpose is to show and properly initialize data structures when using this\nimplementation. Also, note that this burn implementation allows the minter to re-mint a burned\nNFT.\n@param _tokenId ID of the NFT to be burned.",
-            "id": 1413,
+            "id": 1654,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_burn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1389,
+              "id": 1630,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1388,
+                  "id": 1629,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1413,
+                  "scope": 1654,
                   "src": "1894:16:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1395,7 +1395,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1387,
+                    "id": 1628,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1894:7:14",
@@ -1411,27 +1411,27 @@
               "src": "1888:26:14"
             },
             "returnParameters": {
-              "id": 1390,
+              "id": 1631,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1930:0:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "1874:179:14",
             "stateMutability": "nonpayable",
-            "superFunction": 1939,
+            "superFunction": 2180,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 1429,
+              "id": 1670,
               "nodeType": "Block",
               "src": "2552:35:14",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1427,
+                    "id": 1668,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1440,25 +1440,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 1423,
+                        "id": 1664,
                         "name": "idToUri",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1341,
+                        "referencedDeclaration": 1582,
                         "src": "2558:7:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                           "typeString": "mapping(uint256 => string storage ref)"
                         }
                       },
-                      "id": 1425,
+                      "id": 1666,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 1424,
+                        "id": 1665,
                         "name": "_tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1415,
+                        "referencedDeclaration": 1656,
                         "src": "2566:8:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1480,11 +1480,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1426,
+                      "id": 1667,
                       "name": "_uri",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1417,
+                      "referencedDeclaration": 1658,
                       "src": "2578:4:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1497,14 +1497,14 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 1428,
+                  "id": 1669,
                   "nodeType": "ExpressionStatement",
                   "src": "2558:24:14"
                 }
               ]
             },
             "documentation": "@dev Set a distinct URI (RFC 3986) for a given NFT ID.\n@notice This is an internal function which should be called from user-implemented external\nfunction. Its purpose is to show and properly initialize data structures when using this\nimplementation.\n@param _tokenId Id for which we want uri.\n@param _uri String representing RFC 3986 URI.",
-            "id": 1430,
+            "id": 1671,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -1512,11 +1512,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1420,
+                    "id": 1661,
                     "name": "_tokenId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1415,
+                    "referencedDeclaration": 1656,
                     "src": "2540:8:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -1524,14 +1524,14 @@
                     }
                   }
                 ],
-                "id": 1421,
+                "id": 1662,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1419,
+                  "id": 1660,
                   "name": "validNFToken",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1571,
+                  "referencedDeclaration": 1812,
                   "src": "2527:12:14",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
@@ -1545,15 +1545,15 @@
             "name": "_setTokenUri",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1418,
+              "id": 1659,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1415,
+                  "id": 1656,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1430,
+                  "scope": 1671,
                   "src": "2465:16:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1562,7 +1562,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1414,
+                    "id": 1655,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2465:7:14",
@@ -1576,10 +1576,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1417,
+                  "id": 1658,
                   "name": "_uri",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1430,
+                  "scope": 1671,
                   "src": "2487:18:14",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1588,7 +1588,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1416,
+                    "id": 1657,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2487:6:14",
@@ -1604,19 +1604,19 @@
               "src": "2459:50:14"
             },
             "returnParameters": {
-              "id": 1422,
+              "id": 1663,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2552:0:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "2438:149:14",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1432,
+        "scope": 1673,
         "src": "174:2416:14"
       }
     ],
@@ -1626,14 +1626,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/nf-token-metadata.sol",
     "exportedSymbols": {
       "NFTokenMetadata": [
-        1431
+        1672
       ]
     },
-    "id": 1432,
+    "id": 1673,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1327,
+        "id": 1568,
         "literals": [
           "solidity",
           "^",
@@ -1646,10 +1646,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/nf-token.sol",
         "file": "./nf-token.sol",
-        "id": 1328,
+        "id": 1569,
         "nodeType": "ImportDirective",
-        "scope": 1432,
-        "sourceUnit": 2109,
+        "scope": 1673,
+        "sourceUnit": 2350,
         "src": "26:24:14",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1657,10 +1657,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/erc721-metadata.sol",
         "file": "./erc721-metadata.sol",
-        "id": 1329,
+        "id": 1570,
         "nodeType": "ImportDirective",
-        "scope": 1432,
-        "sourceUnit": 915,
+        "scope": 1673,
+        "sourceUnit": 1156,
         "src": "51:31:14",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1671,17 +1671,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1330,
+              "id": 1571,
               "name": "NFToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2108,
+              "referencedDeclaration": 2349,
               "src": "204:7:14",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_NFToken_$2108",
+                "typeIdentifier": "t_contract$_NFToken_$2349",
                 "typeString": "contract NFToken"
               }
             },
-            "id": 1331,
+            "id": 1572,
             "nodeType": "InheritanceSpecifier",
             "src": "204:7:14"
           },
@@ -1689,49 +1689,49 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1332,
+              "id": 1573,
               "name": "ERC721Metadata",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 914,
+              "referencedDeclaration": 1155,
               "src": "215:14:14",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Metadata_$914",
+                "typeIdentifier": "t_contract$_ERC721Metadata_$1155",
                 "typeString": "contract ERC721Metadata"
               }
             },
-            "id": 1333,
+            "id": 1574,
             "nodeType": "InheritanceSpecifier",
             "src": "215:14:14"
           }
         ],
         "contractDependencies": [
-          914,
-          1030,
-          2108,
-          2148,
-          2180
+          1155,
+          1271,
+          2349,
+          2389,
+          2421
         ],
         "contractKind": "contract",
         "documentation": "@dev Optional metadata implementation for ERC-721 non-fungible token standard.",
         "fullyImplemented": true,
-        "id": 1431,
+        "id": 1672,
         "linearizedBaseContracts": [
-          1431,
-          914,
-          2108,
-          2180,
-          2148,
-          1030
+          1672,
+          1155,
+          2349,
+          2421,
+          2389,
+          1271
         ],
         "name": "NFTokenMetadata",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1335,
+            "id": 1576,
             "name": "nftName",
             "nodeType": "VariableDeclaration",
-            "scope": 1431,
+            "scope": 1672,
             "src": "302:23:14",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1740,7 +1740,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 1334,
+              "id": 1575,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "302:6:14",
@@ -1754,10 +1754,10 @@
           },
           {
             "constant": false,
-            "id": 1337,
+            "id": 1578,
             "name": "nftSymbol",
             "nodeType": "VariableDeclaration",
-            "scope": 1431,
+            "scope": 1672,
             "src": "386:25:14",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1766,7 +1766,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 1336,
+              "id": 1577,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "386:6:14",
@@ -1780,10 +1780,10 @@
           },
           {
             "constant": false,
-            "id": 1341,
+            "id": 1582,
             "name": "idToUri",
             "nodeType": "VariableDeclaration",
-            "scope": 1431,
+            "scope": 1672,
             "src": "475:44:14",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1792,9 +1792,9 @@
               "typeString": "mapping(uint256 => string)"
             },
             "typeName": {
-              "id": 1340,
+              "id": 1581,
               "keyType": {
-                "id": 1338,
+                "id": 1579,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "484:7:14",
@@ -1810,7 +1810,7 @@
                 "typeString": "mapping(uint256 => string)"
               },
               "valueType": {
-                "id": 1339,
+                "id": 1580,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "495:6:14",
@@ -1825,14 +1825,14 @@
           },
           {
             "body": {
-              "id": 1350,
+              "id": 1591,
               "nodeType": "Block",
               "src": "683:67:14",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1348,
+                    "id": 1589,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1841,22 +1841,22 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 1344,
+                        "id": 1585,
                         "name": "supportedInterfaces",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2157,
+                        "referencedDeclaration": 2398,
                         "src": "689:19:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
                           "typeString": "mapping(bytes4 => bool)"
                         }
                       },
-                      "id": 1346,
+                      "id": 1587,
                       "indexExpression": {
                         "argumentTypes": null,
                         "hexValue": "30783562356531333966",
-                        "id": 1345,
+                        "id": 1586,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1887,7 +1887,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 1347,
+                      "id": 1588,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1908,32 +1908,32 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1349,
+                  "id": 1590,
                   "nodeType": "ExpressionStatement",
                   "src": "689:38:14"
                 }
               ]
             },
             "documentation": "@dev Contract constructor.\n@notice When implementing this contract don't forget to set nftName and nftSymbol.",
-            "id": 1351,
+            "id": 1592,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1342,
+              "id": 1583,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "667:2:14"
             },
             "returnParameters": {
-              "id": 1343,
+              "id": 1584,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "683:0:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "656:94:14",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1941,25 +1941,25 @@
           },
           {
             "body": {
-              "id": 1360,
+              "id": 1601,
               "nodeType": "Block",
               "src": "940:26:14",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1358,
+                    "id": 1599,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1356,
+                      "id": 1597,
                       "name": "_name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1354,
+                      "referencedDeclaration": 1595,
                       "src": "946:5:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1970,11 +1970,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1357,
+                      "id": 1598,
                       "name": "nftName",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1335,
+                      "referencedDeclaration": 1576,
                       "src": "954:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -1987,35 +1987,35 @@
                       "typeString": "string memory"
                     }
                   },
-                  "id": 1359,
+                  "id": 1600,
                   "nodeType": "ExpressionStatement",
                   "src": "946:15:14"
                 }
               ]
             },
             "documentation": "@dev Returns a descriptive name for a collection of NFTokens.\n@return Representing name. ",
-            "id": 1361,
+            "id": 1602,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "name",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1352,
+              "id": 1593,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "879:2:14"
             },
             "returnParameters": {
-              "id": 1355,
+              "id": 1596,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1354,
+                  "id": 1595,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1361,
+                  "scope": 1602,
                   "src": "917:19:14",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2024,7 +2024,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1353,
+                    "id": 1594,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "917:6:14",
@@ -2039,33 +2039,33 @@
               ],
               "src": "916:21:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "866:100:14",
             "stateMutability": "view",
-            "superFunction": 901,
+            "superFunction": 1142,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 1370,
+              "id": 1611,
               "nodeType": "Block",
               "src": "1147:30:14",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1368,
+                    "id": 1609,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1366,
+                      "id": 1607,
                       "name": "_symbol",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1364,
+                      "referencedDeclaration": 1605,
                       "src": "1153:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -2076,11 +2076,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1367,
+                      "id": 1608,
                       "name": "nftSymbol",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1337,
+                      "referencedDeclaration": 1578,
                       "src": "1163:9:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -2093,35 +2093,35 @@
                       "typeString": "string memory"
                     }
                   },
-                  "id": 1369,
+                  "id": 1610,
                   "nodeType": "ExpressionStatement",
                   "src": "1153:19:14"
                 }
               ]
             },
             "documentation": "@dev Returns an abbreviated name for NFTokens.\n@return Representing symbol. ",
-            "id": 1371,
+            "id": 1612,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "symbol",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1362,
+              "id": 1603,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1084:2:14"
             },
             "returnParameters": {
-              "id": 1365,
+              "id": 1606,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1364,
+                  "id": 1605,
                   "name": "_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1371,
+                  "scope": 1612,
                   "src": "1122:21:14",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2130,7 +2130,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1363,
+                    "id": 1604,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1122:6:14",
@@ -2145,15 +2145,15 @@
               ],
               "src": "1121:23:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "1069:108:14",
             "stateMutability": "view",
-            "superFunction": 906,
+            "superFunction": 1147,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 1385,
+              "id": 1626,
               "nodeType": "Block",
               "src": "1446:35:14",
               "statements": [
@@ -2162,25 +2162,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 1381,
+                      "id": 1622,
                       "name": "idToUri",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1341,
+                      "referencedDeclaration": 1582,
                       "src": "1459:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                         "typeString": "mapping(uint256 => string storage ref)"
                       }
                     },
-                    "id": 1383,
+                    "id": 1624,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 1382,
+                      "id": 1623,
                       "name": "_tokenId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1373,
+                      "referencedDeclaration": 1614,
                       "src": "1467:8:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2198,15 +2198,15 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 1380,
-                  "id": 1384,
+                  "functionReturnParameters": 1621,
+                  "id": 1625,
                   "nodeType": "Return",
                   "src": "1452:24:14"
                 }
               ]
             },
             "documentation": "@dev A distinct URI (RFC 3986) for a given NFT.\n@param _tokenId Id for which we want uri.\n@return URI of _tokenId.",
-            "id": 1386,
+            "id": 1627,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -2214,11 +2214,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1376,
+                    "id": 1617,
                     "name": "_tokenId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1373,
+                    "referencedDeclaration": 1614,
                     "src": "1406:8:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -2226,14 +2226,14 @@
                     }
                   }
                 ],
-                "id": 1377,
+                "id": 1618,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1375,
+                  "id": 1616,
                   "name": "validNFToken",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1571,
+                  "referencedDeclaration": 1812,
                   "src": "1393:12:14",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
@@ -2247,15 +2247,15 @@
             "name": "tokenURI",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1374,
+              "id": 1615,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1373,
+                  "id": 1614,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1386,
+                  "scope": 1627,
                   "src": "1346:16:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2264,7 +2264,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1372,
+                    "id": 1613,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1346:7:14",
@@ -2280,15 +2280,15 @@
               "src": "1340:26:14"
             },
             "returnParameters": {
-              "id": 1380,
+              "id": 1621,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1379,
+                  "id": 1620,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1386,
+                  "scope": 1627,
                   "src": "1429:13:14",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2297,7 +2297,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1378,
+                    "id": 1619,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1429:6:14",
@@ -2312,15 +2312,15 @@
               ],
               "src": "1428:15:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "1323:158:14",
             "stateMutability": "view",
-            "superFunction": 913,
+            "superFunction": 1154,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 1412,
+              "id": 1653,
               "nodeType": "Block",
               "src": "1930:123:14",
               "statements": [
@@ -2330,11 +2330,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1394,
+                        "id": 1635,
                         "name": "_tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1388,
+                        "referencedDeclaration": 1629,
                         "src": "1948:8:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2351,32 +2351,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1391,
+                        "id": 1632,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2404,
+                        "referencedDeclaration": 2645,
                         "src": "1936:5:14",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_NFTokenMetadata_$1431",
+                          "typeIdentifier": "t_super$_NFTokenMetadata_$1672",
                           "typeString": "contract super NFTokenMetadata"
                         }
                       },
-                      "id": 1393,
+                      "id": 1634,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_burn",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1939,
+                      "referencedDeclaration": 2180,
                       "src": "1936:11:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 1395,
+                    "id": 1636,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2390,7 +2390,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1396,
+                  "id": 1637,
                   "nodeType": "ExpressionStatement",
                   "src": "1936:21:14"
                 },
@@ -2401,7 +2401,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1404,
+                    "id": 1645,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2415,25 +2415,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 1398,
+                              "id": 1639,
                               "name": "idToUri",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1341,
+                              "referencedDeclaration": 1582,
                               "src": "1974:7:14",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                                 "typeString": "mapping(uint256 => string storage ref)"
                               }
                             },
-                            "id": 1400,
+                            "id": 1641,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 1399,
+                              "id": 1640,
                               "name": "_tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1388,
+                              "referencedDeclaration": 1629,
                               "src": "1982:8:14",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -2459,7 +2459,7 @@
                               "typeString": "string storage ref"
                             }
                           ],
-                          "id": 1397,
+                          "id": 1638,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2472,7 +2472,7 @@
                           },
                           "typeName": "bytes"
                         },
-                        "id": 1401,
+                        "id": 1642,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2486,7 +2486,7 @@
                           "typeString": "bytes storage pointer"
                         }
                       },
-                      "id": 1402,
+                      "id": 1643,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -2505,7 +2505,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 1403,
+                      "id": 1644,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2527,18 +2527,18 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 1411,
+                  "id": 1652,
                   "nodeType": "IfStatement",
                   "src": "1964:85:14",
                   "trueBody": {
-                    "id": 1410,
+                    "id": 1651,
                     "nodeType": "Block",
                     "src": "2010:39:14",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1408,
+                          "id": 1649,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2551,25 +2551,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 1405,
+                              "id": 1646,
                               "name": "idToUri",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1341,
+                              "referencedDeclaration": 1582,
                               "src": "2025:7:14",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                                 "typeString": "mapping(uint256 => string storage ref)"
                               }
                             },
-                            "id": 1407,
+                            "id": 1648,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 1406,
+                              "id": 1647,
                               "name": "_tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1388,
+                              "referencedDeclaration": 1629,
                               "src": "2033:8:14",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -2592,7 +2592,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 1409,
+                        "id": 1650,
                         "nodeType": "ExpressionStatement",
                         "src": "2018:24:14"
                       }
@@ -2602,22 +2602,22 @@
               ]
             },
             "documentation": "@dev Burns a NFT.\n@notice This is an internal function which should be called from user-implemented external\nburn function. Its purpose is to show and properly initialize data structures when using this\nimplementation. Also, note that this burn implementation allows the minter to re-mint a burned\nNFT.\n@param _tokenId ID of the NFT to be burned.",
-            "id": 1413,
+            "id": 1654,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_burn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1389,
+              "id": 1630,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1388,
+                  "id": 1629,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1413,
+                  "scope": 1654,
                   "src": "1894:16:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2626,7 +2626,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1387,
+                    "id": 1628,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1894:7:14",
@@ -2642,27 +2642,27 @@
               "src": "1888:26:14"
             },
             "returnParameters": {
-              "id": 1390,
+              "id": 1631,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1930:0:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "1874:179:14",
             "stateMutability": "nonpayable",
-            "superFunction": 1939,
+            "superFunction": 2180,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 1429,
+              "id": 1670,
               "nodeType": "Block",
               "src": "2552:35:14",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1427,
+                    "id": 1668,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2671,25 +2671,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 1423,
+                        "id": 1664,
                         "name": "idToUri",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1341,
+                        "referencedDeclaration": 1582,
                         "src": "2558:7:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                           "typeString": "mapping(uint256 => string storage ref)"
                         }
                       },
-                      "id": 1425,
+                      "id": 1666,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 1424,
+                        "id": 1665,
                         "name": "_tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1415,
+                        "referencedDeclaration": 1656,
                         "src": "2566:8:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2711,11 +2711,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1426,
+                      "id": 1667,
                       "name": "_uri",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1417,
+                      "referencedDeclaration": 1658,
                       "src": "2578:4:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -2728,14 +2728,14 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 1428,
+                  "id": 1669,
                   "nodeType": "ExpressionStatement",
                   "src": "2558:24:14"
                 }
               ]
             },
             "documentation": "@dev Set a distinct URI (RFC 3986) for a given NFT ID.\n@notice This is an internal function which should be called from user-implemented external\nfunction. Its purpose is to show and properly initialize data structures when using this\nimplementation.\n@param _tokenId Id for which we want uri.\n@param _uri String representing RFC 3986 URI.",
-            "id": 1430,
+            "id": 1671,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -2743,11 +2743,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1420,
+                    "id": 1661,
                     "name": "_tokenId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1415,
+                    "referencedDeclaration": 1656,
                     "src": "2540:8:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -2755,14 +2755,14 @@
                     }
                   }
                 ],
-                "id": 1421,
+                "id": 1662,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1419,
+                  "id": 1660,
                   "name": "validNFToken",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1571,
+                  "referencedDeclaration": 1812,
                   "src": "2527:12:14",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
@@ -2776,15 +2776,15 @@
             "name": "_setTokenUri",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1418,
+              "id": 1659,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1415,
+                  "id": 1656,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1430,
+                  "scope": 1671,
                   "src": "2465:16:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2793,7 +2793,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1414,
+                    "id": 1655,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2465:7:14",
@@ -2807,10 +2807,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1417,
+                  "id": 1658,
                   "name": "_uri",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1430,
+                  "scope": 1671,
                   "src": "2487:18:14",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2819,7 +2819,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1416,
+                    "id": 1657,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2487:6:14",
@@ -2835,19 +2835,19 @@
               "src": "2459:50:14"
             },
             "returnParameters": {
-              "id": 1422,
+              "id": 1663,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2552:0:14"
             },
-            "scope": 1431,
+            "scope": 1672,
             "src": "2438:149:14",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1432,
+        "scope": 1673,
         "src": "174:2416:14"
       }
     ],
@@ -2859,7 +2859,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-01-02T23:03:20.860Z",
+  "updatedAt": "2020-01-15T03:07:35.985Z",
   "devdoc": {
     "details": "Optional metadata implementation for ERC-721 non-fungible token standard.",
     "methods": {

@@ -34,14 +34,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/tests/mocks/address-utils-mock.sol",
     "exportedSymbols": {
       "AddressUtilsMock": [
-        2201
+        2442
       ]
     },
-    "id": 2202,
+    "id": 2443,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2182,
+        "id": 2423,
         "literals": [
           "solidity",
           "^",
@@ -54,10 +54,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/utils/address-utils.sol",
         "file": "../../contracts/utils/address-utils.sol",
-        "id": 2183,
+        "id": 2424,
         "nodeType": "ImportDirective",
-        "scope": 2202,
-        "sourceUnit": 2139,
+        "scope": 2443,
+        "sourceUnit": 2380,
         "src": "26:49:19",
         "symbolAliases": [],
         "unitAlias": ""
@@ -68,31 +68,31 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2201,
+        "id": 2442,
         "linearizedBaseContracts": [
-          2201
+          2442
         ],
         "name": "AddressUtilsMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 2186,
+            "id": 2427,
             "libraryName": {
               "contractScope": null,
-              "id": 2184,
+              "id": 2425,
               "name": "AddressUtils",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2138,
+              "referencedDeclaration": 2379,
               "src": "113:12:19",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_AddressUtils_$2138",
+                "typeIdentifier": "t_contract$_AddressUtils_$2379",
                 "typeString": "library AddressUtils"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "107:31:19",
             "typeName": {
-              "id": 2185,
+              "id": 2426,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "130:7:19",
@@ -105,25 +105,25 @@
           },
           {
             "body": {
-              "id": 2199,
+              "id": 2440,
               "nodeType": "Block",
               "src": "241:44:19",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2197,
+                    "id": 2438,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2193,
+                      "id": 2434,
                       "name": "addressCheck",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2191,
+                      "referencedDeclaration": 2432,
                       "src": "247:12:19",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -139,32 +139,32 @@
                         "argumentTypes": [],
                         "expression": {
                           "argumentTypes": null,
-                          "id": 2194,
+                          "id": 2435,
                           "name": "_addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2188,
+                          "referencedDeclaration": 2429,
                           "src": "262:5:19",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "id": 2195,
+                        "id": 2436,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "isContract",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2137,
+                        "referencedDeclaration": 2378,
                         "src": "262:16:19",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$bound_to$_t_address_$",
                           "typeString": "function (address) view returns (bool)"
                         }
                       },
-                      "id": 2196,
+                      "id": 2437,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -184,29 +184,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 2198,
+                  "id": 2439,
                   "nodeType": "ExpressionStatement",
                   "src": "247:33:19"
                 }
               ]
             },
             "documentation": null,
-            "id": 2200,
+            "id": 2441,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isContract",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2189,
+              "id": 2430,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2188,
+                  "id": 2429,
                   "name": "_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2200,
+                  "scope": 2441,
                   "src": "167:13:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -215,7 +215,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2187,
+                    "id": 2428,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "167:7:19",
@@ -232,15 +232,15 @@
               "src": "161:23:19"
             },
             "returnParameters": {
-              "id": 2192,
+              "id": 2433,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2191,
+                  "id": 2432,
                   "name": "addressCheck",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2200,
+                  "scope": 2441,
                   "src": "220:17:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -249,7 +249,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2190,
+                    "id": 2431,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "220:4:19",
@@ -264,14 +264,14 @@
               ],
               "src": "219:19:19"
             },
-            "scope": 2201,
+            "scope": 2442,
             "src": "142:143:19",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2202,
+        "scope": 2443,
         "src": "77:210:19"
       }
     ],
@@ -281,14 +281,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/tests/mocks/address-utils-mock.sol",
     "exportedSymbols": {
       "AddressUtilsMock": [
-        2201
+        2442
       ]
     },
-    "id": 2202,
+    "id": 2443,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2182,
+        "id": 2423,
         "literals": [
           "solidity",
           "^",
@@ -301,10 +301,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/utils/address-utils.sol",
         "file": "../../contracts/utils/address-utils.sol",
-        "id": 2183,
+        "id": 2424,
         "nodeType": "ImportDirective",
-        "scope": 2202,
-        "sourceUnit": 2139,
+        "scope": 2443,
+        "sourceUnit": 2380,
         "src": "26:49:19",
         "symbolAliases": [],
         "unitAlias": ""
@@ -315,31 +315,31 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2201,
+        "id": 2442,
         "linearizedBaseContracts": [
-          2201
+          2442
         ],
         "name": "AddressUtilsMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 2186,
+            "id": 2427,
             "libraryName": {
               "contractScope": null,
-              "id": 2184,
+              "id": 2425,
               "name": "AddressUtils",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2138,
+              "referencedDeclaration": 2379,
               "src": "113:12:19",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_AddressUtils_$2138",
+                "typeIdentifier": "t_contract$_AddressUtils_$2379",
                 "typeString": "library AddressUtils"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "107:31:19",
             "typeName": {
-              "id": 2185,
+              "id": 2426,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "130:7:19",
@@ -352,25 +352,25 @@
           },
           {
             "body": {
-              "id": 2199,
+              "id": 2440,
               "nodeType": "Block",
               "src": "241:44:19",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2197,
+                    "id": 2438,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2193,
+                      "id": 2434,
                       "name": "addressCheck",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2191,
+                      "referencedDeclaration": 2432,
                       "src": "247:12:19",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -386,32 +386,32 @@
                         "argumentTypes": [],
                         "expression": {
                           "argumentTypes": null,
-                          "id": 2194,
+                          "id": 2435,
                           "name": "_addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2188,
+                          "referencedDeclaration": 2429,
                           "src": "262:5:19",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "id": 2195,
+                        "id": 2436,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "isContract",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2137,
+                        "referencedDeclaration": 2378,
                         "src": "262:16:19",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$bound_to$_t_address_$",
                           "typeString": "function (address) view returns (bool)"
                         }
                       },
-                      "id": 2196,
+                      "id": 2437,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -431,29 +431,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 2198,
+                  "id": 2439,
                   "nodeType": "ExpressionStatement",
                   "src": "247:33:19"
                 }
               ]
             },
             "documentation": null,
-            "id": 2200,
+            "id": 2441,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isContract",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2189,
+              "id": 2430,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2188,
+                  "id": 2429,
                   "name": "_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2200,
+                  "scope": 2441,
                   "src": "167:13:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -462,7 +462,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2187,
+                    "id": 2428,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "167:7:19",
@@ -479,15 +479,15 @@
               "src": "161:23:19"
             },
             "returnParameters": {
-              "id": 2192,
+              "id": 2433,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2191,
+                  "id": 2432,
                   "name": "addressCheck",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2200,
+                  "scope": 2441,
                   "src": "220:17:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -496,7 +496,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2190,
+                    "id": 2431,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "220:4:19",
@@ -511,14 +511,14 @@
               ],
               "src": "219:19:19"
             },
-            "scope": 2201,
+            "scope": 2442,
             "src": "142:143:19",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2202,
+        "scope": 2443,
         "src": "77:210:19"
       }
     ],
@@ -530,7 +530,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-01-02T23:03:20.883Z",
+  "updatedAt": "2020-01-15T03:07:36.005Z",
   "devdoc": {
     "methods": {}
   },

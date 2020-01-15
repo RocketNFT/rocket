@@ -49,14 +49,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/tests/mocks/nf-token-receiver-test-mock.sol",
     "exportedSymbols": {
       "NFTokenReceiverTestMock": [
-        2320
+        2561
       ]
     },
-    "id": 2321,
+    "id": 2562,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2292,
+        "id": 2533,
         "literals": [
           "solidity",
           "^",
@@ -69,10 +69,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/erc721-token-receiver.sol",
         "file": "../../contracts/tokens/erc721-token-receiver.sol",
-        "id": 2293,
+        "id": 2534,
         "nodeType": "ImportDirective",
-        "scope": 2321,
-        "sourceUnit": 931,
+        "scope": 2562,
+        "sourceUnit": 1172,
         "src": "26:58:22",
         "symbolAliases": [],
         "unitAlias": ""
@@ -83,110 +83,110 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2294,
+              "id": 2535,
               "name": "ERC721TokenReceiver",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 930,
+              "referencedDeclaration": 1171,
               "src": "124:19:22",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721TokenReceiver_$930",
+                "typeIdentifier": "t_contract$_ERC721TokenReceiver_$1171",
                 "typeString": "contract ERC721TokenReceiver"
               }
             },
-            "id": 2295,
+            "id": 2536,
             "nodeType": "InheritanceSpecifier",
             "src": "124:19:22"
           }
         ],
         "contractDependencies": [
-          930
+          1171
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2320,
+        "id": 2561,
         "linearizedBaseContracts": [
-          2320,
-          930
+          2561,
+          1171
         ],
         "name": "NFTokenReceiverTestMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2318,
+              "id": 2559,
               "nodeType": "Block",
               "src": "304:79:22",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2308,
+                    "id": 2549,
                     "name": "_operator",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2297,
+                    "referencedDeclaration": 2538,
                     "src": "310:9:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 2309,
+                  "id": 2550,
                   "nodeType": "ExpressionStatement",
                   "src": "310:9:22"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2310,
+                    "id": 2551,
                     "name": "_from",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2299,
+                    "referencedDeclaration": 2540,
                     "src": "325:5:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 2311,
+                  "id": 2552,
                   "nodeType": "ExpressionStatement",
                   "src": "325:5:22"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2312,
+                    "id": 2553,
                     "name": "_tokenId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2301,
+                    "referencedDeclaration": 2542,
                     "src": "336:8:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2313,
+                  "id": 2554,
                   "nodeType": "ExpressionStatement",
                   "src": "336:8:22"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2314,
+                    "id": 2555,
                     "name": "_data",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2303,
+                    "referencedDeclaration": 2544,
                     "src": "350:5:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_calldata_ptr",
                       "typeString": "bytes calldata"
                     }
                   },
-                  "id": 2315,
+                  "id": 2556,
                   "nodeType": "ExpressionStatement",
                   "src": "350:5:22"
                 },
@@ -194,7 +194,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "30783135306237613032",
-                    "id": 2316,
+                    "id": 2557,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -209,30 +209,30 @@
                     },
                     "value": "0x150b7a02"
                   },
-                  "functionReturnParameters": 2307,
-                  "id": 2317,
+                  "functionReturnParameters": 2548,
+                  "id": 2558,
                   "nodeType": "Return",
                   "src": "361:17:22"
                 }
               ]
             },
             "documentation": null,
-            "id": 2319,
+            "id": 2560,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "onERC721Received",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2304,
+              "id": 2545,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2297,
+                  "id": 2538,
                   "name": "_operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2319,
+                  "scope": 2560,
                   "src": "180:17:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -241,7 +241,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2296,
+                    "id": 2537,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "180:7:22",
@@ -256,10 +256,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2299,
+                  "id": 2540,
                   "name": "_from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2319,
+                  "scope": 2560,
                   "src": "203:13:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -268,7 +268,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2298,
+                    "id": 2539,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "203:7:22",
@@ -283,10 +283,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2301,
+                  "id": 2542,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2319,
+                  "scope": 2560,
                   "src": "222:16:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -295,7 +295,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2300,
+                    "id": 2541,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "222:7:22",
@@ -309,10 +309,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2303,
+                  "id": 2544,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2319,
+                  "scope": 2560,
                   "src": "244:20:22",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -321,7 +321,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 2302,
+                    "id": 2543,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "244:5:22",
@@ -337,15 +337,15 @@
               "src": "174:94:22"
             },
             "returnParameters": {
-              "id": 2307,
+              "id": 2548,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2306,
+                  "id": 2547,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2319,
+                  "scope": 2560,
                   "src": "294:6:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -354,7 +354,7 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 2305,
+                    "id": 2546,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
                     "src": "294:6:22",
@@ -369,14 +369,14 @@
               ],
               "src": "293:8:22"
             },
-            "scope": 2320,
+            "scope": 2561,
             "src": "149:234:22",
             "stateMutability": "nonpayable",
-            "superFunction": 929,
+            "superFunction": 1170,
             "visibility": "external"
           }
         ],
-        "scope": 2321,
+        "scope": 2562,
         "src": "86:300:22"
       }
     ],
@@ -386,14 +386,14 @@
     "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/tests/mocks/nf-token-receiver-test-mock.sol",
     "exportedSymbols": {
       "NFTokenReceiverTestMock": [
-        2320
+        2561
       ]
     },
-    "id": 2321,
+    "id": 2562,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2292,
+        "id": 2533,
         "literals": [
           "solidity",
           "^",
@@ -406,10 +406,10 @@
       {
         "absolutePath": "/Users/elliotfriedman/Desktop/721escrow/contracts/src/contracts/tokens/erc721-token-receiver.sol",
         "file": "../../contracts/tokens/erc721-token-receiver.sol",
-        "id": 2293,
+        "id": 2534,
         "nodeType": "ImportDirective",
-        "scope": 2321,
-        "sourceUnit": 931,
+        "scope": 2562,
+        "sourceUnit": 1172,
         "src": "26:58:22",
         "symbolAliases": [],
         "unitAlias": ""
@@ -420,110 +420,110 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2294,
+              "id": 2535,
               "name": "ERC721TokenReceiver",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 930,
+              "referencedDeclaration": 1171,
               "src": "124:19:22",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721TokenReceiver_$930",
+                "typeIdentifier": "t_contract$_ERC721TokenReceiver_$1171",
                 "typeString": "contract ERC721TokenReceiver"
               }
             },
-            "id": 2295,
+            "id": 2536,
             "nodeType": "InheritanceSpecifier",
             "src": "124:19:22"
           }
         ],
         "contractDependencies": [
-          930
+          1171
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2320,
+        "id": 2561,
         "linearizedBaseContracts": [
-          2320,
-          930
+          2561,
+          1171
         ],
         "name": "NFTokenReceiverTestMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2318,
+              "id": 2559,
               "nodeType": "Block",
               "src": "304:79:22",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2308,
+                    "id": 2549,
                     "name": "_operator",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2297,
+                    "referencedDeclaration": 2538,
                     "src": "310:9:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 2309,
+                  "id": 2550,
                   "nodeType": "ExpressionStatement",
                   "src": "310:9:22"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2310,
+                    "id": 2551,
                     "name": "_from",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2299,
+                    "referencedDeclaration": 2540,
                     "src": "325:5:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 2311,
+                  "id": 2552,
                   "nodeType": "ExpressionStatement",
                   "src": "325:5:22"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2312,
+                    "id": 2553,
                     "name": "_tokenId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2301,
+                    "referencedDeclaration": 2542,
                     "src": "336:8:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2313,
+                  "id": 2554,
                   "nodeType": "ExpressionStatement",
                   "src": "336:8:22"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2314,
+                    "id": 2555,
                     "name": "_data",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2303,
+                    "referencedDeclaration": 2544,
                     "src": "350:5:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_calldata_ptr",
                       "typeString": "bytes calldata"
                     }
                   },
-                  "id": 2315,
+                  "id": 2556,
                   "nodeType": "ExpressionStatement",
                   "src": "350:5:22"
                 },
@@ -531,7 +531,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "30783135306237613032",
-                    "id": 2316,
+                    "id": 2557,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -546,30 +546,30 @@
                     },
                     "value": "0x150b7a02"
                   },
-                  "functionReturnParameters": 2307,
-                  "id": 2317,
+                  "functionReturnParameters": 2548,
+                  "id": 2558,
                   "nodeType": "Return",
                   "src": "361:17:22"
                 }
               ]
             },
             "documentation": null,
-            "id": 2319,
+            "id": 2560,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "onERC721Received",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2304,
+              "id": 2545,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2297,
+                  "id": 2538,
                   "name": "_operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2319,
+                  "scope": 2560,
                   "src": "180:17:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -578,7 +578,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2296,
+                    "id": 2537,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "180:7:22",
@@ -593,10 +593,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2299,
+                  "id": 2540,
                   "name": "_from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2319,
+                  "scope": 2560,
                   "src": "203:13:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -605,7 +605,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2298,
+                    "id": 2539,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "203:7:22",
@@ -620,10 +620,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2301,
+                  "id": 2542,
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2319,
+                  "scope": 2560,
                   "src": "222:16:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -632,7 +632,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2300,
+                    "id": 2541,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "222:7:22",
@@ -646,10 +646,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2303,
+                  "id": 2544,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2319,
+                  "scope": 2560,
                   "src": "244:20:22",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -658,7 +658,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 2302,
+                    "id": 2543,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "244:5:22",
@@ -674,15 +674,15 @@
               "src": "174:94:22"
             },
             "returnParameters": {
-              "id": 2307,
+              "id": 2548,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2306,
+                  "id": 2547,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2319,
+                  "scope": 2560,
                   "src": "294:6:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -691,7 +691,7 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 2305,
+                    "id": 2546,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
                     "src": "294:6:22",
@@ -706,14 +706,14 @@
               ],
               "src": "293:8:22"
             },
-            "scope": 2320,
+            "scope": 2561,
             "src": "149:234:22",
             "stateMutability": "nonpayable",
-            "superFunction": 929,
+            "superFunction": 1170,
             "visibility": "external"
           }
         ],
-        "scope": 2321,
+        "scope": 2562,
         "src": "86:300:22"
       }
     ],
@@ -725,7 +725,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-01-02T23:03:20.892Z",
+  "updatedAt": "2020-01-15T03:07:36.018Z",
   "devdoc": {
     "methods": {}
   },
