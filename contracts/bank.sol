@@ -17,7 +17,7 @@ contract Escrow is ERC165 {
         require(msg.sender == _owner);
         _;
     }
-    
+    s
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
     
     address public _owner;
@@ -58,7 +58,6 @@ contract Escrow is ERC165 {
     }
 
     function adminLock(address contractAddress, uint256 tokenId) public onlyOwner {
-        require(msg.sender == ownerOf(contractAddress, tokenId));
         require(isOwnerLocked(contractAddress, tokenId) == true, 'isOwnerLocked');
 
         isAdminlocked[contractAddress][tokenId] = true;
@@ -68,7 +67,6 @@ contract Escrow is ERC165 {
     * @dev Allows the owner to unlock their token if the administrator has not locked it
      */
     function adminUnlock(address contractAddress, uint256 tokenId) public onlyOwner {
-        require(msg.sender == ownerOf(contractAddress, tokenId), 'not owner');
         require(isOwnerLocked(contractAddress, tokenId) == true, 'isOwnerLocked');
         require(isAdminLocked(contractAddress, tokenId) == false, 'isAdminLocked');
         
