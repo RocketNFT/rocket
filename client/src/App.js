@@ -39,6 +39,9 @@ class App extends Component {
     }
   }
 
+  /**
+   * Instanciate new contracts like Dummy NFT & BANK
+   */
   componentDidMount = async () => {
     try {
       // Get network provider and web3 instance.
@@ -75,6 +78,9 @@ class App extends Component {
     }
   };
 
+  /**
+   * dynamically fetch how many NFTs current wallet account has
+   */
   getNftBalanceOf = async (address) => {
     const { web3, ERC721ContractAddress } = this.state
     if(!web3.utils.isAddress(ERC721ContractAddress)) {
@@ -104,6 +110,9 @@ class App extends Component {
     this.setState({ ERC721ContractAddress: event.target.value})
   }
 
+  /**
+   * Example for minting a token for deposit it later in bank
+   */
   mintToken = async () => {
     const { NFTInstance, accounts, tokenId } = this.state
     const owner = accounts[0]
@@ -118,6 +127,9 @@ class App extends Component {
     this.updateTokenCount()
   }
 
+  /**
+   * Withdraw NFT token from bank contract
+   */
   withdraw = async () => {
     const { BankInstance, accounts, tokenId, web3, ERC721ContractAddress } = this.state
     if(!web3.utils.isAddress(ERC721ContractAddress)) {
@@ -136,6 +148,9 @@ class App extends Component {
     this.updateTokenCount()
   }
 
+  /**
+   * Bank deposit NFT token from provided contract address
+   */
   deposit = async () => {
     const { BankInstance, accounts, tokenId, web3, ERC721ContractAddress } = this.state
     if(!web3.utils.isAddress(ERC721ContractAddress)) {
@@ -154,6 +169,9 @@ class App extends Component {
     this.updateTokenCount()
   }
 
+  /**
+   * Update UI balance number
+   */
   updateTokenCount = async () => {
     const { BankInstance, accounts } = this.state
     const owner = accounts[0]
@@ -163,6 +181,9 @@ class App extends Component {
     this.setState({bankBalance, ownerBalance})
   }
 
+  /**
+   * SC Bank - check if admin locked
+   */
   getIsAdminLocked = async () => {
     const { BankInstance, tokenId, web3, ERC721ContractAddress } = this.state
     if(!web3.utils.isAddress(ERC721ContractAddress)) {
@@ -175,6 +196,9 @@ class App extends Component {
     this.setState({ isAdminLocked })
   }
   
+  /**
+   * SC Bank - check if owneer locked
+   */
   getIsOwnerLocked = async () => {
     const { BankInstance, tokenId, web3, ERC721ContractAddress } = this.state
     if(!web3.utils.isAddress(ERC721ContractAddress)) {
@@ -187,6 +211,9 @@ class App extends Component {
     this.setState({ getIsOwnerLocked })
   }
 
+  /**
+   * Refactored function to call a Bank method. only works for lock & unlock features
+   */
   lockUnlock = async (contractMethod) => {
     const { accounts, tokenId, web3, ERC721ContractAddress } = this.state
     if(!web3.utils.isAddress(ERC721ContractAddress)) {
@@ -199,6 +226,11 @@ class App extends Component {
     console.log({lockUnlockResponse})
   }
 
+  /**
+   * New owner lock token feature
+   * - owner locks
+   * - later admin locks
+   */
   ownerLock = async () => {
     const { BankInstance } = this.state
     this.lockUnlock(BankInstance.methods.ownerLock)
@@ -209,6 +241,11 @@ class App extends Component {
     this.lockUnlock(BankInstance.methods.ownerUnlock)
   }
 
+  /**
+   * New admin lock token feature
+   * - owner locks
+   * - later admin locks
+   */
   adminLock = async () => {
     const { BankInstance } = this.state
     this.lockUnlock(BankInstance.methods.adminLock)
@@ -219,6 +256,9 @@ class App extends Component {
     this.lockUnlock(BankInstance.methods.adminUnlock)
   }
 
+  /**
+   * With this SC bank admin can withdraw NFTs in case of defaulting
+   */
   adminCollateralize = async (to) => {
     const { accounts, BankInstance, tokenId, web3, ERC721ContractAddress } = this.state
     if(!web3.utils.isAddress(ERC721ContractAddress)) {
