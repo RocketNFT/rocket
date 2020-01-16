@@ -4,7 +4,6 @@ import NFTContract from "./contracts/NFToken.json";
 import ERC721Contract from "./contracts/ERC721.json";
 import getWeb3 from "./getWeb3";
 
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 
@@ -162,6 +161,74 @@ class App extends Component {
     const ownerBalance = await this.getNftBalanceOf(owner)
     console.log({bankBalance, ownerBalance})
     this.setState({bankBalance, ownerBalance})
+  }
+
+  getIsAdminLocked = async () => {
+    const { BankInstance, tokenId, web3, ERC721ContractAddress } = this.state
+    if(!web3.utils.isAddress(ERC721ContractAddress)) {
+      alert('Invalid address '+ ERC721ContractAddress)
+      return
+    }
+
+    const isAdminLocked = await BankInstance.methods.isAdminLocked(ERC721ContractAddress, tokenId).cal()
+    console.log({isAdminLocked})
+    this.setState({ isAdminLocked })
+  }
+  
+  getIsOwnerLocked = async () => {
+    const { BankInstance, tokenId, web3, ERC721ContractAddress } = this.state
+    if(!web3.utils.isAddress(ERC721ContractAddress)) {
+      alert('Invalid address '+ ERC721ContractAddress)
+      return
+    }
+
+    const getIsOwnerLocked = await BankInstance.methods.getIsOwnerLocked(ERC721ContractAddress, tokenId).cal()
+    console.log({getIsOwnerLocked})
+    this.setState({ getIsOwnerLocked })
+  }
+
+  lockUnlock = async (contractMethod) => {
+    const { accounts, tokenId, web3, ERC721ContractAddress } = this.state
+    if(!web3.utils.isAddress(ERC721ContractAddress)) {
+      alert('Invalid address '+ ERC721ContractAddress)
+      return
+    }
+
+    const owner = accounts[0]
+    const lockUnlockResponse = await contractMethod(ERC721ContractAddress, tokenId).send({ from: owner, gas })
+    console.log({lockUnlockResponse})
+  }
+
+  ownerLock = async () => {
+    const { BankInstance } = this.state
+    this.lockUnlock(BankInstance.methods.ownerLock)
+  }
+
+  ownerUnlock = async () => {
+    const { BankInstance } = this.state
+    this.lockUnlock(BankInstance.methods.ownerUnlock)
+  }
+
+  adminLock = async () => {
+    const { BankInstance } = this.state
+    this.lockUnlock(BankInstance.methods.adminLock)
+  }
+
+  adminUnlock = async () => {
+    const { BankInstance } = this.state
+    this.lockUnlock(BankInstance.methods.adminUnlock)
+  }
+
+  adminCollateralize = async (to) => {
+    const { accounts, BankInstance, tokenId, web3, ERC721ContractAddress } = this.state
+    if(!web3.utils.isAddress(ERC721ContractAddress)) {
+      alert('Invalid address '+ ERC721ContractAddress)
+      return
+    }
+
+    const owner = accounts[0]
+    const adminCollateralizeResponse = await BankInstance.methods.adminCollateralize(ERC721ContractAddress, to,  tokenId, '0x0a').send({ from: owner, gas })
+    console.log({adminCollateralizeResponse})
   }
 
   render() {
