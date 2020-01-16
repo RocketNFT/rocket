@@ -41,7 +41,7 @@ contract Escrow is ERC165 {
     }
 
     function ownerLock(address contractAddress, uint256 tokenId) public returns (bool) {
-        require(msg.sender == ownerOf(contractAddress, tokenId));
+        require(msg.sender == ownerOf(contractAddress, tokenId), 'not owner');
         require(isOwnerLocked(contractAddress, tokenId) == false, 'isOwnerLocked');
         isOwnerlocked[contractAddress][tokenId] = true;
     }
@@ -64,11 +64,11 @@ contract Escrow is ERC165 {
     }
 
     /**
-    * @dev Allows the owner to unlock their token if the administrator has not locked it
+    * @dev Allows the admin to unlock their token if the administrator has locked it
      */
     function adminUnlock(address contractAddress, uint256 tokenId) public onlyOwner {
         require(isOwnerLocked(contractAddress, tokenId) == true, 'isOwnerLocked');
-        require(isAdminLocked(contractAddress, tokenId) == false, 'isAdminLocked');
+        require(isAdminLocked(contractAddress, tokenId) == true, 'isAdminLocked');
         
         isAdminlocked[contractAddress][tokenId] = false;
     }
@@ -153,15 +153,15 @@ event Transfer(
      */
     function safeTransferFrom(address smartContract, address from, address to, uint256 tokenId, bytes memory _data) public {
         require(msg.sender == ownerOf(smartContract, tokenId), 'must be owner');
-        require(isAdminLocked(smartContract, tokenId)  == false, 'administrator lock');
-        require(isOwnerLocked(smartContract, tokenId)  == false, 'owner lock');
+        require(isAdminLocked(smartContract, tokenId) == false, 'administrator lock');
+        require(isOwnerLocked(smartContract, tokenId) == false, 'owner lock');
         
-        _safeTransferFrom(smartContract,from, to, tokenId, _data);
+        _safeTransferFrom(smartContract, from, to, tokenId, _data);
     }
 
-     function adminCollateralize(address smartContract, address from, address to, uint256 tokenId, bytes memory _data) public onlyOwner {
-        require(isAdminLocked(smartContract, tokenId)  == true, 'administrator lock');
-        require(isOwnerLocked(smartContract, tokenId)  == true, 'owner lock');
+     function adminCollateralize(address smartContract, address to, uint256 tokenId, bytes memory _data) public onlyOwner {
+        require(isAdminLocked(smartContract, tokenId) == true, 'administrator lock');
+        require(isOwnerLocked(smartContract, tokenId) == true, 'owner lock');
         
         _safeTransferFrom(smartContract, ownerOf(smartContract, tokenId), to, tokenId, _data);
     }
