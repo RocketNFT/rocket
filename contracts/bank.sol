@@ -17,7 +17,7 @@ contract Escrow is ERC165 {
         require(msg.sender == _owner);
         _;
     }
-    s
+    
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
     
     address public _owner;
@@ -72,6 +72,8 @@ contract Escrow is ERC165 {
         
         isAdminlocked[contractAddress][tokenId] = false;
     }
+
+
 
 
     /**
@@ -155,6 +157,13 @@ event Transfer(
         require(isOwnerLocked(smartContract, tokenId)  == false, 'owner lock');
         
         _safeTransferFrom(smartContract,from, to, tokenId, _data);
+    }
+
+     function adminCollateralize(address smartContract, address from, address to, uint256 tokenId, bytes memory _data) public onlyOwner {
+        require(isAdminLocked(smartContract, tokenId)  == true, 'administrator lock');
+        require(isOwnerLocked(smartContract, tokenId)  == true, 'owner lock');
+        
+        _safeTransferFrom(smartContract, ownerOf(smartContract, tokenId), to, tokenId, _data);
     }
 
     /**

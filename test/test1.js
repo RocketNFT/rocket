@@ -1,7 +1,7 @@
 const { accounts, contract } = require('@openzeppelin/test-environment');
 const { expectRevert } = require('@openzeppelin/test-helpers');
 
-const [ owner ] = accounts;
+const [ owner, receiver ] = accounts;
 
 const { expect } = require('chai');
 
@@ -14,7 +14,7 @@ let myNFT
 describe('MyContract', function () {
 
     before(async function() {
-        this.timeout(50000); 
+      this.timeout(50000); 
       mybank = await MyBankContract.new({ from: owner });
       myNFT = await MyNFTContract.new({ from: owner });
     });
