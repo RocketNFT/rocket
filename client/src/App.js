@@ -76,7 +76,7 @@ class App extends Component {
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      const newState = { web3, accounts, BankInstance, NFTInstance, ERC721ContractAddress: nftAddress, isBankAdmin, isERC721Owner }
+      const newState = { web3, accounts, BankInstance, NFTInstance, ERC721ContractAddress: nftAddress, bankAdminAddress, isBankAdmin, isERC721Owner }
       console.log(newState)
       this.setState(newState);
     } catch (error) {
@@ -316,7 +316,7 @@ class App extends Component {
   }
 
   render() {
-    const { web3, isAdminLocked, isOwnerLocked, isBankAdmin, isERC721Owner } = this.state
+    const { web3, tokenId, isAdminLocked, isOwnerLocked, bankAdminAddress, isBankAdmin, isERC721Owner } = this.state
     if (!web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
@@ -337,7 +337,7 @@ class App extends Component {
       ]
     }
 
-    const bankCardProps = {
+    const BankCardProps = {
       title: 'Bank Contract',
       address: this.state.BankInstance._address,
       balance: this.state.bankBalance,
@@ -351,16 +351,24 @@ class App extends Component {
           value: 'Withdraw',
           onClick: this.withdraw
         },
-        isBankAdmin ? {
-          value: isAdminLocked ? 'Admin Unlock' : 'Admin lock',
-          onClick: isAdminLocked ? this.adminUnlock : this.adminLock
-        } : null,
         isERC721Owner ? {
-          value: isOwnerLocked ? 'NFT Owner unlock' : 'NFT Owner lock',
+          value: isOwnerLocked ? `Unlock token Id: ${tokenId}` : `Lock token Id: ${tokenId}`,
           onClick: isOwnerLocked ? this.ownerUnlock : this.ownerLock
         } : null
       ].filter(Boolean)
     }
+
+    const AdminCardProps = {
+      title: 'Bank Admin',
+      address: bankAdminAddress,
+      actions: [
+        {
+          value: isAdminLocked ? `Admin Unlock Id: ${tokenId}` : `Admin lock Id: ${tokenId}`,
+          onClick: isAdminLocked ? this.adminUnlock : this.adminLock
+        }
+      ]
+    }
+
     return (
       <div className="App">
         <h2>MVP Banking</h2>
@@ -411,8 +419,15 @@ class App extends Component {
             <Card {...NFTCardProps}/>
           </Grid>
           <Grid item>
-            <Card {...bankCardProps}/>
+            <Card {...BankCardProps}/>
           </Grid>
+          {
+            isBankAdmin ? 
+            <Grid item>
+              <Card {...AdminCardProps}/>
+            </Grid>
+            : null
+          }
         </Grid>
       </div>
     );
