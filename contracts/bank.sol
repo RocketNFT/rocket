@@ -42,7 +42,7 @@ contract Escrow is ERC165 {
 
     function ownerLock(address contractAddress, uint256 tokenId) public returns (bool) {
         require(msg.sender == ownerOf(contractAddress, tokenId), 'not owner');
-        require(isOwnerLocked(contractAddress, tokenId) == false, 'isOwnerLocked');
+        require(isOwnerLocked(contractAddress, tokenId) == false, 'Owner is locked');
         isOwnerlocked[contractAddress][tokenId] = true;
     }
 
@@ -51,14 +51,14 @@ contract Escrow is ERC165 {
      */
     function ownerUnlock(address contractAddress, uint256 tokenId) public {
         require(msg.sender == ownerOf(contractAddress, tokenId), 'not owner');
-        require(isOwnerLocked(contractAddress, tokenId) == true, 'isOwnerLocked');
-        require(isAdminLocked(contractAddress, tokenId) == false, 'isAdminLocked');
+        require(isOwnerLocked(contractAddress, tokenId) == true, 'Owner isnt locked');
+        require(isAdminLocked(contractAddress, tokenId) == false, 'Admin is locked');
         
         isOwnerlocked[contractAddress][tokenId] = false;
     }
 
     function adminLock(address contractAddress, uint256 tokenId) public onlyOwner {
-        require(isOwnerLocked(contractAddress, tokenId) == true, 'isOwnerLocked');
+        require(isOwnerLocked(contractAddress, tokenId) == true, 'Owner isnt locked');
 
         isAdminlocked[contractAddress][tokenId] = true;
     }
@@ -67,8 +67,8 @@ contract Escrow is ERC165 {
     * @dev Allows the admin to unlock their token if the administrator has locked it
      */
     function adminUnlock(address contractAddress, uint256 tokenId) public onlyOwner {
-        require(isOwnerLocked(contractAddress, tokenId) == true, 'isOwnerLocked');
-        require(isAdminLocked(contractAddress, tokenId) == true, 'isAdminLocked');
+        require(isOwnerLocked(contractAddress, tokenId) == true, 'Owner isnt locked');
+        require(isAdminLocked(contractAddress, tokenId) == true, 'Admin inst locked');
         
         isAdminlocked[contractAddress][tokenId] = false;
     }
@@ -201,7 +201,6 @@ event Transfer(
      */
     function _isApprovedOrOwner(address smartContract, uint256 tokenId) internal view returns (bool) {
         require(_exists(tokenId, smartContract), "ERC721: operator query for nonexistent token");
-        address owner = ownerOf(smartContract, tokenId);
         return msg.sender == ownerOf(smartContract, tokenId);
     }
     
