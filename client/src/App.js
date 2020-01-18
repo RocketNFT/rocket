@@ -22,8 +22,12 @@ class App extends Component {
     contract: null,
     bankBalance: 0,
     ownerBalance: 0,
-    ERC721ContractAddress: null
-  };
+    ERC721ContractAddress: null,
+    isAdminLocked: false,
+    isOwnerLocked: false,
+    isBankAdmin: false,
+    isERC721Owner: false
+  }
 
   deployedNetworkIds = (id) => {
     if(ROPSTEN === id) {
@@ -33,8 +37,8 @@ class App extends Component {
       }
     } else {
       return {
-        bankAddress: BankContract.networks[id],
-        nftAddress: NFTContract.networks[id]
+        bankAddress: BankContract.networks[id].address,
+        nftAddress: NFTContract.networks[id].address
       }
     }
   }
@@ -63,10 +67,16 @@ class App extends Component {
         NFTContract.abi,
         nftAddress,
       );
-      
+
+      const bankAdminAddress = await BankInstance.methods._owner().call()
+      const isBankAdmin = bankAdminAddress === accounts[0]
+
+      const nftOwnerAddress = await BankInstance.methods.ownerOf(nftAddress, this.state.tokenId).call()
+      const isERC721Owner = nftOwnerAddress === accounts[0]
+
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      const newState = { web3, accounts, BankInstance, NFTInstance, ERC721ContractAddress: nftAddress }
+      const newState = { web3, accounts, BankInstance, NFTInstance, ERC721ContractAddress: nftAddress, isBankAdmin, isERC721Owner }
       console.log(newState)
       this.setState(newState);
     } catch (error) {
@@ -78,10 +88,27 @@ class App extends Component {
     }
   };
 
+  getERC721Owner = async () => {
+    const { web3, BankInstance, ERC721ContractAddress, tokenId } = this.state
+    if(!web3.utils.isAddress(ERC721ContractAddress)) {
+      alert('Invalid address '+ ERC721ContractAddress)
+      return
+    }
+
+    let result = null;
+    try {
+      result = await BankInstance.methods.ownerOf(ERC721ContractAddress, tokenId).call()
+      console.log({ownerAddress: result, tokenId})
+    } catch (error) {
+      console.log(error)
+    }
+    return result
+  }
+
   /**
    * dynamically fetch how many NFTs current wallet account has
    */
-  getNftBalanceOf = async (address) => {
+  getERC721BalanceOf = async (address) => {
     const { web3, ERC721ContractAddress } = this.state
     if(!web3.utils.isAddress(ERC721ContractAddress)) {
       alert('Invalid address '+ ERC721ContractAddress)
@@ -103,7 +130,9 @@ class App extends Component {
   }
   
   handleTokenIdInput = (event) => {
-    this.setState({ tokenId: Number(event.target.value)})
+    this.setState({ tokenId: Number(event.target.value)}, () => {
+      this.updateNFTBankStatus()
+    })
   }
 
   handleERC721ContractAddress = (event) => {
@@ -124,7 +153,7 @@ class App extends Component {
     } catch (error) {
       console.log(error)
     }
-    this.updateTokenCount()
+    this.updateNFTBankStatus()
   }
 
   /**
@@ -145,7 +174,7 @@ class App extends Component {
     const bankResponse = await BankInstance.methods.safeTransferFrom(ERC721Instance._address, owner, owner, tokenId, '0x0a').send({ from: owner, gas })
     console.log({bankResponse})
 
-    this.updateTokenCount()
+    this.updateNFTBankStatus()
   }
 
   /**
@@ -166,7 +195,7 @@ class App extends Component {
     const safeTransferResponse = await ERC721Instance.methods.safeTransferFrom(owner, BankInstance._address, tokenId).send({ from: owner, gas })
     console.log({safeTransferResponse})
 
-    this.updateTokenCount()
+    this.updateNFTBankStatus()
   }
 
   /**
@@ -175,8 +204,8 @@ class App extends Component {
   updateTokenCount = async () => {
     const { BankInstance, accounts } = this.state
     const owner = accounts[0]
-    const bankBalance = await this.getNftBalanceOf(BankInstance._address)
-    const ownerBalance = await this.getNftBalanceOf(owner)
+    const bankBalance = await this.getERC721BalanceOf(BankInstance._address)
+    const ownerBalance = await this.getERC721BalanceOf(owner)
     console.log({bankBalance, ownerBalance})
     this.setState({bankBalance, ownerBalance})
   }
@@ -190,10 +219,10 @@ class App extends Component {
       alert('Invalid address '+ ERC721ContractAddress)
       return
     }
-
-    const isAdminLocked = await BankInstance.methods.isAdminLocked(ERC721ContractAddress, tokenId).cal()
-    console.log({isAdminLocked})
-    this.setState({ isAdminLocked })
+    
+    const isAdminLocked = await BankInstance.methods.isAdminLocked(ERC721ContractAddress, tokenId).call()
+    console.log({isAdminLocked, tokenId})
+    return isAdminLocked
   }
   
   /**
@@ -206,9 +235,19 @@ class App extends Component {
       return
     }
 
-    const getIsOwnerLocked = await BankInstance.methods.getIsOwnerLocked(ERC721ContractAddress, tokenId).cal()
-    console.log({getIsOwnerLocked})
-    this.setState({ getIsOwnerLocked })
+    const isOwnerLocked = await BankInstance.methods.isOwnerLocked(ERC721ContractAddress, tokenId).call()
+    console.log({isOwnerLocked, tokenId})
+    return isOwnerLocked
+  }
+  
+  updateNFTBankStatus = async () => {
+    this.updateTokenCount()
+    const isAdminLocked = await this.getIsAdminLocked()
+    const isOwnerLocked = await this.getIsOwnerLocked()
+    const erc721Owner = await this.getERC721Owner()
+    const isERC721Owner = erc721Owner === this.state.accounts[0]
+    
+    this.setState({ isAdminLocked, isOwnerLocked, isERC721Owner })
   }
 
   /**
@@ -233,12 +272,14 @@ class App extends Component {
    */
   ownerLock = async () => {
     const { BankInstance } = this.state
-    this.lockUnlock(BankInstance.methods.ownerLock)
+    await this.lockUnlock(BankInstance.methods.ownerLock)
+    this.updateNFTBankStatus()
   }
 
   ownerUnlock = async () => {
     const { BankInstance } = this.state
-    this.lockUnlock(BankInstance.methods.ownerUnlock)
+    await this.lockUnlock(BankInstance.methods.ownerUnlock)
+    this.updateNFTBankStatus()
   }
 
   /**
@@ -248,12 +289,14 @@ class App extends Component {
    */
   adminLock = async () => {
     const { BankInstance } = this.state
-    this.lockUnlock(BankInstance.methods.adminLock)
+    await this.lockUnlock(BankInstance.methods.adminLock)
+    this.updateNFTBankStatus()
   }
 
   adminUnlock = async () => {
     const { BankInstance } = this.state
-    this.lockUnlock(BankInstance.methods.adminUnlock)
+    await this.lockUnlock(BankInstance.methods.adminUnlock)
+    this.updateNFTBankStatus()
   }
 
   /**
@@ -269,10 +312,12 @@ class App extends Component {
     const owner = accounts[0]
     const adminCollateralizeResponse = await BankInstance.methods.adminCollateralize(ERC721ContractAddress, to,  tokenId, '0x0a').send({ from: owner, gas })
     console.log({adminCollateralizeResponse})
+    this.updateNFTBankStatus()
   }
 
   render() {
-    if (!this.state.web3) {
+    const { web3, isAdminLocked, isOwnerLocked, isBankAdmin, isERC721Owner } = this.state
+    if (!web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
 
@@ -291,10 +336,12 @@ class App extends Component {
         }
       ]
     }
+
     const bankCardProps = {
       title: 'Bank Contract',
       address: this.state.BankInstance._address,
       balance: this.state.bankBalance,
+      erc721Status: { isAdminLocked, isOwnerLocked },
       actions: [
         {
           value: 'Deposit',
@@ -303,8 +350,16 @@ class App extends Component {
         {
           value: 'Withdraw',
           onClick: this.withdraw
-        }
-      ]
+        },
+        isBankAdmin ? {
+          value: isAdminLocked ? 'Admin Unlock' : 'Admin lock',
+          onClick: isAdminLocked ? this.adminUnlock : this.adminLock
+        } : null,
+        isERC721Owner ? {
+          value: isOwnerLocked ? 'NFT Owner unlock' : 'NFT Owner lock',
+          onClick: isOwnerLocked ? this.ownerUnlock : this.ownerLock
+        } : null
+      ].filter(Boolean)
     }
     return (
       <div className="App">
@@ -320,6 +375,9 @@ class App extends Component {
         </p>
         <p>
           Editable field ERC721 Contract Address for third party contracts
+        </p>
+        <p>
+          After deposit, lock NFT token on Bank contract, then admin will lock your token
         </p>
         <TextField
           id="filled-full-width"

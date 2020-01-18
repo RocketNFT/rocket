@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function OutlinedCard({ title, address, balance, actions }) {
+export default function OutlinedCard({ title, address, balance, actions, erc721Status }) {
   const classes = useStyles();
 
   return (
@@ -43,6 +43,15 @@ export default function OutlinedCard({ title, address, balance, actions }) {
             Balance
             <br />
             {balance}
+          </Typography>
+          : null
+        }
+        {
+          erc721Status !== undefined ?
+          <Typography variant="body2" component="p">
+            Admin Status : {erc721Status.isAdminLocked ? 'locked' : 'unlocked'}
+            <br />
+            NFT owner Status : {erc721Status.isOwnerLocked ? 'locked' : 'unlocked'}
           </Typography>
           : null
         }
