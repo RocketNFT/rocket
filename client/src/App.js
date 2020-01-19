@@ -338,7 +338,7 @@ class App extends Component {
     }
 
     const BankCardProps = {
-      title: 'Bank Contract',
+      title: 'Rocket Contract',
       address: this.state.BankInstance._address,
       balance: this.state.bankBalance,
       erc721Status: { isAdminLocked, isOwnerLocked },
@@ -360,7 +360,7 @@ class App extends Component {
     }
 
     const AdminCardProps = {
-      title: 'Bank Admin',
+      title: 'Rocket Admin',
       address: bankAdminAddress,
       actions: [
         {
@@ -372,21 +372,21 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h2>MVP Banking</h2>
+        <h2>MVP Rocket</h2>
         <p>
           Try changing the Token ID {this.state.tokenId} (number) and click mint, see Personal balance +1.
         </p>
         <p>
-          Keep the same Token ID {this.state.tokenId} and click Deposit to deposit this NFT token on Bank contract.
+          Keep the same Token ID {this.state.tokenId} and click Deposit to deposit this NFT token on Rocket contract.
         </p>
         <p>
-          Last, click Withdraw to transfer NFT token {this.state.tokenId} from Bank contract to Personal wallet
+          Last, click Withdraw to transfer NFT token {this.state.tokenId} from Rocket contract to Personal wallet
         </p>
         <p>
           Editable field ERC721 Contract Address for third party contracts
         </p>
         <p>
-          After deposit, start a loan process with NFT token on Bank contract, then admin will lock your token
+          After deposit, start a loan process with NFT token on Rocket contract, then admin will lock your token
         </p>
         <TextField
           id="filled-full-width"
