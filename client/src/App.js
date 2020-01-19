@@ -352,7 +352,8 @@ class App extends Component {
           onClick: this.withdraw
         },
         isERC721Owner ? {
-          value: isOwnerLocked ? `Unlock token Id: ${tokenId}` : `Lock token Id: ${tokenId}`,
+          value: isOwnerLocked ? `Cancel loan process Id: ${tokenId}` : `Start a loan process Id: ${tokenId}`,
+          disclaimer: isOwnerLocked ? '' : 'by clicking this button, you agree to lock your NFT(s)',
           onClick: isOwnerLocked ? this.ownerUnlock : this.ownerLock
         } : null
       ].filter(Boolean)
@@ -385,7 +386,7 @@ class App extends Component {
           Editable field ERC721 Contract Address for third party contracts
         </p>
         <p>
-          After deposit, lock NFT token on Bank contract, then admin will lock your token
+          After deposit, start a loan process with NFT token on Bank contract, then admin will lock your token
         </p>
         <TextField
           id="filled-full-width"

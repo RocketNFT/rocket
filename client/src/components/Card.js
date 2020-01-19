@@ -57,7 +57,16 @@ export default function OutlinedCard({ title, address, balance, actions, erc721S
         }
       </CardContent>
       <CardActions>
-        {actions && actions.map(({value, ...props}, index) => <Button key={index} {...props} variant="outlined" color="primary">{value}</Button>)}
+        {actions && actions.map(({value, disclaimer, ...props}, index) => {
+          return (
+            <div style={{ padding: 10 }}>
+              <Button key={index} {...props} variant="outlined" color="primary">{value}</Button>
+              <Typography variant="caption" component="p">
+                {disclaimer}
+              </Typography>
+            </div>
+          )
+        })}
       </CardActions>
     </Card>
   );
