@@ -32,8 +32,8 @@ class App extends Component {
   deployedNetworkIds = (id) => {
     if(ROPSTEN === id) {
       return {
-        bankAddress: '0x0ab83D15191aF787E7A2ce0af48B008a93cda6A4',
-        nftAddress: '0x4d60e17365a11207A21ebd854115E2c49769c553'
+        bankAddress: '0xDC8f79324b4f40c5c93A0D6969FFd204C0650C11',
+        nftAddress: '0xfeca45c514F52e43d0171b4a755EDB5f2E6AF445'
       }
     } else {
       return {

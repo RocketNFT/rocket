@@ -1,0 +1,138 @@
+Migrations dry-run (simulation)
+===============================
+> Network name:    'ropsten-fork'
+> Network id:      3
+> Block gas limit: 0x7a1200
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > block number:        7155972
+   > block timestamp:     1579473107
+   > account:             0xdDf09AfbC02521DB3869e018508F7353F5dF927b
+   > balance:             1.897761662999911944
+   > gas used:            248741
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000497482 ETH
+
+   -------------------------------------
+   > Total cost:         0.000497482 ETH
+
+
+2_deploy.js
+===========
+
+   Deploying 'bank'
+   ----------------
+   > block number:        7155974
+   > block timestamp:     1579473115
+   > account:             0xdDf09AfbC02521DB3869e018508F7353F5dF927b
+   > balance:             1.893521946999911944
+   > gas used:            2092835
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00418567 ETH
+
+
+   Deploying 'NFToken'
+   -------------------
+   > block number:        7155975
+   > block timestamp:     1579473123
+   > account:             0xdDf09AfbC02521DB3869e018508F7353F5dF927b
+   > balance:             1.889414430999911944
+   > gas used:            2053758
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.004107516 ETH
+
+   -------------------------------------
+   > Total cost:         0.008293186 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.008790668 ETH
+
+
+
+
+
+Starting migrations...
+======================
+> Network name:    'ropsten'
+> Network id:      3
+> Block gas limit: 0x7a1200
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x2f8b7e7a54565185c330788c3a6628d6b83301b98d30f8e944bf1a3f361dcba6
+   > Blocks: 1            Seconds: 105
+   > contract address:    0xf43Cf05C88C7fb1aEdb41391918E233F50644Dec
+   > block number:        7155972
+   > block timestamp:     1579473135
+   > account:             0xdDf09AfbC02521DB3869e018508F7353F5dF927b
+   > balance:             1.893754404999911944
+   > gas used:            225237
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00450474 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00450474 ETH
+
+
+2_deploy.js
+===========
+
+   Deploying 'bank'
+   ----------------
+   > transaction hash:    0xfb89de8e0cf2d421e74a44c8e01a497f83e2891b6149b9c44bcdf64dfe6ab6a0
+   > Blocks: 1            Seconds: 85
+   > contract address:    0xDC8f79324b4f40c5c93A0D6969FFd204C0650C11
+   > block number:        7155975
+   > block timestamp:     1579473277
+   > account:             0xdDf09AfbC02521DB3869e018508F7353F5dF927b
+   > balance:             1.857210364999911944
+   > gas used:            1784839
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.03569678 ETH
+
+
+   Deploying 'NFToken'
+   -------------------
+   > transaction hash:    0xa0e88793edee33b62806a490a4c13dd0d35f6aa77a47f299a8ad7e665c79e582
+   > Blocks: 0            Seconds: 52
+   > contract address:    0xfeca45c514F52e43d0171b4a755EDB5f2E6AF445
+   > block number:        7155976
+   > block timestamp:     1579473358
+   > account:             0xdDf09AfbC02521DB3869e018508F7353F5dF927b
+   > balance:             1.822749604999911944
+   > gas used:            1723038
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.03446076 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.07015754 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.07466228 ETH
