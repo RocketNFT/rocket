@@ -71,7 +71,12 @@ class App extends Component {
       const bankAdminAddress = await BankInstance.methods._owner().call()
       const isBankAdmin = bankAdminAddress === accounts[0]
 
-      const nftOwnerAddress = await BankInstance.methods.ownerOf(nftAddress, this.state.tokenId).call()
+      let nftOwnerAddress = ''
+      try {
+        nftOwnerAddress = await BankInstance.methods.ownerOf(nftAddress, this.state.tokenId).call()
+      } catch (error) {
+        console.log({error})
+      }
       const isERC721Owner = nftOwnerAddress === accounts[0]
 
       // Set web3, accounts, and contract to the state, and then proceed with an
