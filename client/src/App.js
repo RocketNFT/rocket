@@ -377,7 +377,7 @@ class App extends Component {
       title: "Rocket Contract",
       address: this.state.BankInstance._address,
       balance: this.state.bankBalance,
-      erc721Status: { isAdminLocked, },
+      erc721Status: { isAdminLocked },
       actions: [
         {
           value: "Deposit",
@@ -405,267 +405,254 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="bg">
-          <ButtonAppBar {...AccountCardProps} />
-          <MediaQuery minDeviceWidth={1001}>
-            <div className="divTrans">
-              <Grid container className="gridContainer">
-                <Grid item xs={12}>
-                  <h2>MVP Rocket</h2>
-                </Grid>
-                <Grid item xs={12}>
-                  <p className="pStyle1">
-                    Rocket Alpha Testnet (please switch to Ropsten) <br />
-                    Start a loan process by depositing NFTs In this version, you
-                    can try depositing a NFT.
-                  </p>
-                </Grid>
-                <Grid item xs={4}>
-                  <p className="pStyle2">
-                    <span className="spanStyle1">1.</span> Since you likely do
-                    not have any testnet NFT, you can mint one below in our
-                    <br />
-                    <span className="spanStyle1">“Dummy NFT Contract”</span>.
-                  </p>
-                </Grid>
-                <Grid item xs={4}>
-                  <p className="pStyle2">
-                    <span className="spanStyle1">2.</span> Then, you can deposit
-                    them.
-                    <br /> At this stage, they are still fully yours: we cannot
-                    seize them.
-                    <br />
-                    What you can do now is{" "}
-                    <span className="spanStyle1">Start a loan</span>{" "}
-                    application, which locks your NFT.
-                  </p>
-                </Grid>
-                <Grid item xs={4}>
-                  <p className="pStyle2">
-                    <span className="spanStyle1">3.</span> Until we agree on
-                    terms and lock it on our side, you are free to Withdraw
-                    them.
-                  </p>
-                </Grid>
+        <ButtonAppBar {...AccountCardProps} />
+        <MediaQuery minDeviceWidth={1001}>
+          <div className="divTrans">
+            <Grid container className="gridContainer">
+              <Grid item xs={12}>
+                <h2>MVP Rocket</h2>
               </Grid>
-              <p className="pStyle3">Thats It!</p>
-              <TextField
-                id="filled-full-width"
-                label="Token ID"
-                className="textField1"
-                style={{ marginRight: "10px" }}
-                margin="normal"
-                InputLabelProps={{
-                  shrink: true
-                }}
-                variant="outlined"
-                onChange={this.handleTokenIdInput}
-                value={this.state.tokenId}
-              />
-              <TextField
-                id="filled-full-width"
-                className="textField1"
-                label="ERC721 Contract Address"
-                margin="normal"
-                style={{ marginLeft: "10px" }}
-                InputLabelProps={{
-                  shrink: true
-                }}
-                variant="outlined"
-                onChange={this.handleERC721ContractAddress}
-                value={this.state.ERC721ContractAddress}
-              />
-              <Grid container justify="center" spacing={2}>
+              <Grid item xs={12}>
+                <p className="pStyle1">
+                  Rocket Alpha Testnet (please switch to Ropsten) <br />
+                  Start a loan process by depositing NFTs In this version, you
+                  can try depositing a NFT.
+                </p>
+              </Grid>
+              <Grid item xs={4}>
+                <p className="pStyle2">
+                  <span className="spanStyle1">1.</span> Since you likely do not
+                  have any testnet NFT, you can mint one below in our
+                  <br />
+                  <span className="spanStyle1">“Dummy NFT Contract”</span>.
+                </p>
+              </Grid>
+              <Grid item xs={4}>
+                <p className="pStyle2">
+                  <span className="spanStyle1">2.</span> Then, you can deposit
+                  them.
+                  <br /> At this stage, they are still fully yours: we cannot
+                  seize them.
+                  <br />
+                  What you can do now is{" "}
+                  <span className="spanStyle1">Start a loan</span> application,
+                  which locks your NFT.
+                </p>
+              </Grid>
+              <Grid item xs={4}>
+                <p className="pStyle2">
+                  <span className="spanStyle1">3.</span> Until we agree on terms
+                  and lock it on our side, you are free to Withdraw them.
+                </p>
+              </Grid>
+            </Grid>
+            <p className="pStyle3">Thats It!</p>
+            <TextField
+              id="filled-full-width"
+              label="Token ID"
+              className="textField1"
+              style={{ marginRight: "10px" }}
+              margin="normal"
+              InputLabelProps={{
+                shrink: true
+              }}
+              variant="outlined"
+              onChange={this.handleTokenIdInput}
+              value={this.state.tokenId}
+            />
+            <TextField
+              id="filled-full-width"
+              className="textField1"
+              label="ERC721 Contract Address"
+              margin="normal"
+              style={{ marginLeft: "10px" }}
+              InputLabelProps={{
+                shrink: true
+              }}
+              variant="outlined"
+              onChange={this.handleERC721ContractAddress}
+              value={this.state.ERC721ContractAddress}
+            />
+            <Grid container justify="center" spacing={2}>
+              <Grid item>
+                <Card {...NFTCardProps} />
+              </Grid>
+              <Grid item>
+                <Card {...BankCardProps} />
+              </Grid>
+              {isBankAdmin ? (
                 <Grid item>
-                  <Card {...NFTCardProps} />
+                  <Card {...AdminCardProps} />
                 </Grid>
+              ) : null}
+            </Grid>
+          </div>
+        </MediaQuery>
+        <MediaQuery minDeviceWidth={476} maxDeviceWidth={1000}>
+          <div style={{ marginTop: "15%" }} className="divTrans">
+            <Grid container className="gridContainer">
+              <Grid item xs={12}>
+                <h2>MVP Rocket</h2>
+              </Grid>
+              <Grid item xs={12}>
+                <p style={{ fontWeight: 700, textAlign: "center" }}>
+                  Rocket Alpha Testnet (please switch to Ropsten) <br />
+                  Start a loan process by depositing NFTs In this version, you
+                  can try depositing a NFT.
+                </p>
+              </Grid>
+              <Grid item xs={4}>
+                <p style={{ fontWeight: 500 }}>
+                  <span className="spanStyle1">1.</span> Since you likely do not
+                  have any testnet NFT,
+                  <br /> you can mint one below in our
+                  <br />
+                  <span className="spanStyle1">“Dummy NFT Contract”</span>.
+                </p>
+              </Grid>
+              <Grid item xs={4}>
+                <p style={{ fontWeight: 500 }}>
+                  <span className="spanStyle1">2.</span> Then, you can deposit
+                  them.
+                  <br /> At this stage, they are still fully yours: we cannot
+                  seize them.
+                  <br />
+                  What you can do now is{" "}
+                  <span className="spanStyle1">Start a loan</span> application,
+                  which locks your NFT.
+                </p>
+              </Grid>
+              <Grid item xs={4}>
+                <p style={{ fontWeight: 500 }}>
+                  <span className="spanStyle1">3.</span> Until we agree on terms
+                  and lock it on our side, <br />
+                  you are free to Withdraw them.
+                </p>
+              </Grid>
+            </Grid>
+            <p style={{ fontWeight: 700, marginBottom: "3%" }}>Thats It!</p>
+            <TextField
+              id="filled-full-width"
+              label="Token ID"
+              className="textField1"
+              margin="normal"
+              InputLabelProps={{
+                shrink: true
+              }}
+              variant="outlined"
+              onChange={this.handleTokenIdInput}
+              value={this.state.tokenId}
+            />
+            <TextField
+              id="filled-full-width"
+              className="textField1"
+              label="ERC721 Contract Address"
+              margin="normal"
+              InputLabelProps={{
+                shrink: true
+              }}
+              variant="outlined"
+              onChange={this.handleERC721ContractAddress}
+              value={this.state.ERC721ContractAddress}
+            />
+            <Grid container justify="center" spacing={2} className="gridStyle1">
+              <Grid item>
+                <Card {...NFTCardProps} />
+              </Grid>
+              <Grid item>
+                <Card {...BankCardProps} />
+              </Grid>
+              {isBankAdmin ? (
                 <Grid item>
-                  <Card {...BankCardProps} />
+                  <Card {...AdminCardProps} />
                 </Grid>
-                {isBankAdmin ? (
-                  <Grid item>
-                    <Card {...AdminCardProps} />
-                  </Grid>
-                ) : null}
+              ) : null}
+            </Grid>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={475}>
+          <div style={{ marginTop: "20%" }} className="divTrans">
+            <Grid container className="gridContainer">
+              <Grid item xs={12}>
+                <h2>MVP Rocket</h2>
               </Grid>
-            </div>
-          </MediaQuery>
-          <MediaQuery minDeviceWidth={476} maxDeviceWidth={1000}>
-            <div style={{ marginTop: "15%" }} className="divTrans">
-              <Grid container className="gridContainer">
-                <Grid item xs={12}>
-                  <h2>MVP Rocket</h2>
-                </Grid>
-                <Grid item xs={12}>
-                  <p style={{ fontWeight: 700, textAlign: "center" }}>
-                    Rocket Alpha Testnet (please switch to Ropsten) <br />
-                    Start a loan process by depositing NFTs In this version, you
-                    can try depositing a NFT.
-                  </p>
-                </Grid>
-                <Grid item xs={4}>
-                  <p style={{ fontWeight: 500 }}>
-                    <span className="spanStyle1">1.</span> Since you likely do
-                    not have any testnet NFT,
-                    <br /> you can mint one below in our
-                    <br />
-                    <span className="spanStyle1">“Dummy NFT Contract”</span>.
-                  </p>
-                </Grid>
-                <Grid item xs={4}>
-                  <p style={{ fontWeight: 500 }}>
-                    <span className="spanStyle1">2.</span> Then, you can deposit
-                    them.
-                    <br /> At this stage, they are still fully yours: we cannot
-                    seize them.
-                    <br />
-                    What you can do now is{" "}
-                    <span className="spanStyle1">Start a loan</span>{" "}
-                    application, which locks your NFT.
-                  </p>
-                </Grid>
-                <Grid item xs={4}>
-                  <p style={{ fontWeight: 500 }}>
-                    <span className="spanStyle1">3.</span> Until we agree on
-                    terms and lock it on our side, <br />
-                    you are free to Withdraw them.
-                  </p>
-                </Grid>
+              <Grid item xs={12}>
+                <p style={{ fontWeight: 700, textAlign: "center" }}>
+                  Rocket Alpha Testnet (please switch to Ropsten) <br />
+                  Start a loan process by depositing NFTs In this version, you
+                  can try depositing a NFT.
+                </p>
               </Grid>
-              <p style={{ fontWeight: 700, marginBottom: "3%" }}>Thats It!</p>
-              <TextField
-                id="filled-full-width"
-                label="Token ID"
-                className="textField1"
-                margin="normal"
-                InputLabelProps={{
-                  shrink: true
-                }}
-                variant="outlined"
-                onChange={this.handleTokenIdInput}
-                value={this.state.tokenId}
-              />
-              <TextField
-                id="filled-full-width"
-                className="textField1"
-                label="ERC721 Contract Address"
-                margin="normal"
-                InputLabelProps={{
-                  shrink: true
-                }}
-                variant="outlined"
-                onChange={this.handleERC721ContractAddress}
-                value={this.state.ERC721ContractAddress}
-              />
-              <Grid
-                container
-                justify="center"
-                spacing={2}
-                className="gridStyle1"
-              >
-                <Grid item>
-                  <Card {...NFTCardProps} />
-                </Grid>
-                <Grid item>
-                  <Card {...BankCardProps} />
-                </Grid>
-                {isBankAdmin ? (
-                  <Grid item>
-                    <Card {...AdminCardProps} />
-                  </Grid>
-                ) : null}
+              <Grid item xs={4}>
+                <p style={{ fontWeight: 500 }}>
+                  <span className="spanStyle1">1.</span> Since you likely do not
+                  have any testnet NFT,
+                  <br /> you can mint one below in our
+                  <br />
+                  <span className="spanStyle1">“Dummy NFT Contract”</span>.
+                </p>
               </Grid>
-            </div>
-          </MediaQuery>
-          <MediaQuery maxDeviceWidth={475}>
-            <div style={{ marginTop: "20%" }} className="divTrans">
-              <Grid container className="gridContainer">
-                <Grid item xs={12}>
-                  <h2>MVP Rocket</h2>
-                </Grid>
-                <Grid item xs={12}>
-                  <p style={{ fontWeight: 700, textAlign: "center" }}>
-                    Rocket Alpha Testnet (please switch to Ropsten) <br />
-                    Start a loan process by depositing NFTs In this version, you
-                    can try depositing a NFT.
-                  </p>
-                </Grid>
-                <Grid item xs={4}>
-                  <p style={{ fontWeight: 500 }}>
-                    <span className="spanStyle1">1.</span> Since you likely do
-                    not have any testnet NFT,
-                    <br /> you can mint one below in our
-                    <br />
-                    <span className="spanStyle1">“Dummy NFT Contract”</span>.
-                  </p>
-                </Grid>
-                <Grid item xs={4}>
-                  <p style={{ fontWeight: 500 }}>
-                    <span className="spanStyle1">2.</span> Then, you can deposit
-                    them.
-                    <br /> At this stage, they are still fully yours: we cannot
-                    seize them.
-                    <br />
-                    What you can do now is{" "}
-                    <span className="spanStyle1">Start a loan</span>{" "}
-                    application, which locks your NFT.
-                  </p>
-                </Grid>
-                <Grid item xs={4}>
-                  <p style={{ fontWeight: 500 }}>
-                    <span className="spanStyle1">3.</span> Until we agree on
-                    terms and lock it on our side, <br />
-                    you are free to Withdraw them.
-                  </p>
-                </Grid>
+              <Grid item xs={4}>
+                <p style={{ fontWeight: 500 }}>
+                  <span className="spanStyle1">2.</span> Then, you can deposit
+                  them.
+                  <br /> At this stage, they are still fully yours: we cannot
+                  seize them.
+                  <br />
+                  What you can do now is{" "}
+                  <span className="spanStyle1">Start a loan</span> application,
+                  which locks your NFT.
+                </p>
               </Grid>
-              <p style={{ fontWeight: 700, marginBottom: "3%" }}>Thats It!</p>
+              <Grid item xs={4}>
+                <p style={{ fontWeight: 500 }}>
+                  <span className="spanStyle1">3.</span> Until we agree on terms
+                  and lock it on our side, <br />
+                  you are free to Withdraw them.
+                </p>
+              </Grid>
+            </Grid>
+            <p style={{ fontWeight: 700, marginBottom: "3%" }}>Thats It!</p>
 
-              <TextField
-                id="filled-full-width"
-                label="Token ID"
-                className="textField1"
-                margin="normal"
-                InputLabelProps={{
-                  shrink: true
-                }}
-                variant="outlined"
-                onChange={this.handleTokenIdInput}
-                value={this.state.tokenId}
-              />
-              <TextField
-                id="filled-full-width"
-                className="textField1"
-                label="ERC721 Contract Address"
-                margin="normal"
-                InputLabelProps={{
-                  shrink: true
-                }}
-                variant="outlined"
-                onChange={this.handleERC721ContractAddress}
-                value={this.state.ERC721ContractAddress}
-              />
-              <Grid
-                container
-                justify="center"
-                spacing={2}
-                className="gridStyle1"
-              >
-                <Grid item>
-                  <Card {...NFTCardProps} />
-                </Grid>
-                <Grid item>
-                  <Card {...BankCardProps} />
-                </Grid>
-                {isBankAdmin ? (
-                  <Grid item>
-                    <Card {...AdminCardProps} />
-                  </Grid>
-                ) : null}
+            <TextField
+              id="filled-full-width"
+              label="Token ID"
+              className="textField1"
+              margin="normal"
+              InputLabelProps={{
+                shrink: true
+              }}
+              variant="outlined"
+              onChange={this.handleTokenIdInput}
+              value={this.state.tokenId}
+            />
+            <TextField
+              id="filled-full-width"
+              className="textField1"
+              label="ERC721 Contract Address"
+              margin="normal"
+              InputLabelProps={{
+                shrink: true
+              }}
+              variant="outlined"
+              onChange={this.handleERC721ContractAddress}
+              value={this.state.ERC721ContractAddress}
+            />
+            <Grid container justify="center" spacing={2} className="gridStyle1">
+              <Grid item>
+                <Card {...NFTCardProps} />
               </Grid>
-            </div>
-          </MediaQuery>
-        </div>
+              <Grid item>
+                <Card {...BankCardProps} />
+              </Grid>
+              {isBankAdmin ? (
+                <Grid item>
+                  <Card {...AdminCardProps} />
+                </Grid>
+              ) : null}
+            </Grid>
+          </div>
+        </MediaQuery>
       </div>
     );
   }
