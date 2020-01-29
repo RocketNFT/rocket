@@ -1,8 +1,7 @@
-const bank = artifacts.require("bank");
+const rocket = artifacts.require("rocket");
 const NFToken = artifacts.require("NFToken");
 
 module.exports = function(deployer) {
-  deployer.deploy(bank);
+  deployer.deploy(rocket);
   deployer.deploy(NFToken);
 };
-
