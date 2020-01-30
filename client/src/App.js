@@ -407,7 +407,7 @@ class App extends Component {
       <div className="App">
         <ButtonAppBar {...AccountCardProps} />
         <MediaQuery minDeviceWidth={1001}>
-          <div className="divTrans">
+          <div className="divTrans" style={{ paddingBottom: "15px" }}>
             <Grid container className="gridContainer">
               <Grid item xs={12}>
                 <h2>MVP Rocket</h2>
@@ -488,6 +488,7 @@ class App extends Component {
             </Grid>
           </div>
         </MediaQuery>
+
         <MediaQuery minDeviceWidth={476} maxDeviceWidth={1000}>
           <div style={{ marginTop: "15%" }} className="divTrans">
             <Grid container className="gridContainer">
@@ -583,6 +584,7 @@ class App extends Component {
                   can try depositing a NFT.
                 </p>
               </Grid>
+              <Grid item xs={12}></Grid>
               <Grid item xs={4}>
                 <p style={{ fontWeight: 500 }}>
                   <span className="spanStyle1">1.</span> Since you likely do not

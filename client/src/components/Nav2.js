@@ -73,6 +73,14 @@ class ButtonAppBar extends Component {
           <Toolbar>
             <Grid container>
               <Grid item xs={6}>
+                <img
+                  src="LogoRocket.png"
+                  alt="ok"
+                  className="imgStyle1"
+                  style={{ height: "35px" }}
+                />
+              </Grid>
+              <Grid item xs={6}>
                 <Button
                   variant="outlined"
                   className="buttonStyle1"
@@ -81,14 +89,6 @@ class ButtonAppBar extends Component {
                 >
                   {address}
                 </Button>
-              </Grid>
-              <Grid item xs={6}>
-                <img
-                  src="LogoRocket.png"
-                  alt="ok"
-                  className="imgStyle1"
-                  style={{ height: "35px" }}
-                />
               </Grid>
             </Grid>
           </Toolbar>
