@@ -62,10 +62,9 @@ export default function OutlinedCard({
           actions.map(({ value, disclaimer, ...props }, index) => {
             return (
               // <div style={{ padding: 10 }}>
-              <Grid container style={{ padding: 10 }}>
+              <Grid key={index} container style={{ padding: 10 }}>
                 <Grid item xs={12}>
                   <Button
-                    key={index}
                     {...props}
                     variant="outlined"
                     color="primary"

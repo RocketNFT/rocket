@@ -21,7 +21,7 @@
     "deploy:ropsten": "truffle deploy --network ropsten",
     "network": "ganache-cli",
     "migrate": "truffle migrate",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "truffle test test/*.js"
   },
   "author": "",
   "license": "ISC"

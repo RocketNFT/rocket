@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BankContract from "./contracts/bank.json";
+import BankContract from "./contracts/Rocket.json";
 import NFTContract from "./contracts/NFToken.json";
 import ERC721Contract from "./contracts/ERC721.json";
 import getWeb3 from "./getWeb3";
