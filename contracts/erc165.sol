@@ -1,18 +1,14 @@
-
 pragma solidity ^0.5.12;
 
-contract ERC165 {
+import {RocketStorage} from './RocketStorage.sol';
+
+contract ERC165 is RocketStorage {
     /*
      * bytes4(keccak256('supportsInterface(bytes4)')) == 0x01ffc9a7
      */
     bytes4 private constant _INTERFACE_ID_ERC165 = 0x01ffc9a7;
 
-    /**
-     * @dev Mapping of interface ids to whether or not it's supported.
-     */
-    mapping(bytes4 => bool) private _supportedInterfaces;
-
-    constructor () internal {
+    constructor() internal {
         // Derived contracts need only register support for their own interfaces,
         // we register support for ERC165 itself here
         _registerInterface(_INTERFACE_ID_ERC165);
@@ -23,7 +19,11 @@ contract ERC165 {
      *
      * Time complexity O(1), guaranteed to always use less than 30 000 gas.
      */
-    function supportsInterface(bytes4 interfaceId) external view returns (bool) {
+    function supportsInterface(bytes4 interfaceId)
+        external
+        view
+        returns (bool)
+    {
         return _supportedInterfaces[interfaceId];
     }
 
@@ -39,7 +39,7 @@ contract ERC165 {
      * - `interfaceId` cannot be the ERC165 invalid interface (`0xffffffff`).
      */
     function _registerInterface(bytes4 interfaceId) internal {
-        require(interfaceId != 0xffffffff, "ERC165: invalid interface id");
+        require(interfaceId != 0xffffffff, 'ERC165: invalid interface id');
         _supportedInterfaces[interfaceId] = true;
     }
 }

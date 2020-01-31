@@ -2,8 +2,54 @@
   text-align: center;
 }
 
+.divTrans {
+  margin-top: "7%";
+}
+
+.bg {
+  min-height: 800px;
+  background-image: linear-gradient(160deg, white 70%, #acd7ec 30%);
+}
+
 .App-logo {
   height: 40vmin;
+}
+
+.pStyle1 {
+  font-weight: 700;
+  text-align: "center";
+}
+
+.pStyle2 {
+  font-weight: 500;
+  /* padding: 12%; */
+  /* max-width: 150px; */
+}
+
+.spanStyle1 {
+  font-weight: 700;
+}
+
+.buttonStyle1 {
+  color: "black";
+}
+
+.pStyle3 {
+  font-weight: 700;
+  margin-bottom: "3%";
+}
+
+.gridStyle1 {
+  margin-top: "2%";
+}
+
+.pStyle4 {
+  font-size: "16px";
+  font-weight: 500;
+}
+
+.divStyle1 {
+  padding: "20px";
 }
 
 .App-header {
@@ -19,4 +65,29 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.textField1 {
+  margin: 8;
+  -webkit-box-shadow: 3px 3px 6px -3px rgba(135, 134, 161, 1);
+  -moz-box-shadow: 3px 3px 6px -3px rgba(135, 134, 161, 1);
+  box-shadow: 3px 3px 6px -3px rgba(135, 134, 161, 1);
+}
+
+.card {
+  min-width: 275;
+  -webkit-box-shadow: 3px 3px 6px -3px rgba(135, 134, 161, 1);
+  -moz-box-shadow: 3px 3px 6px -3px rgba(135, 134, 161, 1);
+  box-shadow: 3px 3px 6px -3px rgba(135, 134, 161, 1);
+}
+
+.gridContainer {
+  margin-top: 8%;
+  padding-right: 25px;
+  padding-left: 25px;
+  background: "transparent";
+}
+
+.bld {
+  font-weight: 500;
 }
