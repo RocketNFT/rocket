@@ -7,6 +7,8 @@
     "test": "test"
   },
   "dependencies": {
+    "@decentral.ee/web3-test-helpers": "^0.2.4",
+    "dotenv": "^8.2.0",
     "ganache-cli": "^6.8.1",
     "truffle": "^5.1.7",
     "truffle-hdwallet-provider": "^1.0.17"
@@ -18,7 +20,6 @@
     "mocha": "^6.2.2"
   },
   "scripts": {
-    "deploy:ropsten": "truffle deploy --network ropsten",
     "network": "ganache-cli",
     "migrate": "truffle migrate",
     "test": "truffle test test/*.js"
