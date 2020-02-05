@@ -23,7 +23,7 @@ module.exports = {
       provider: () =>
         new HDWalletProvider(
           process.env.TESTNET_MNEMONIC,
-          'https://kovan.infura.io/v3/ebe4d04169c4443ebe87905060aa16eb',
+          `https://kovan.infura.io/v3/${process.env.INFURA_ENDPOINT_KEY}`,
           // `https://kovan.io/v3/${process.env.INFURA_ENDPOINT_KEY}`,
           0, //address_index
           10, // num_addresses
