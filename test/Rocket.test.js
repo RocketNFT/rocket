@@ -1,12 +1,12 @@
-const { expectRevert } = require('@openzeppelin/test-helpers');
+const { expectRevert } = require("@openzeppelin/test-helpers");
 
-const { expect } = require('chai');
+const { expect } = require("chai");
 
-const Proxy = artifacts.require('Proxy');
-const Rocket = artifacts.require('Rocket'); // Loads a compiled contract
-const MyNFTContract = artifacts.require('NFToken');
+const Proxy = artifacts.require("Proxy");
+const Rocket = artifacts.require("Rocket"); // Loads a compiled contract
+const MyNFTContract = artifacts.require("NFToken");
 
-contract('Rocket', accounts => {
+contract("Rocket", accounts => {
   const owner = accounts[0];
   const receiver = accounts[1];
   let rocketLogic;
@@ -17,7 +17,7 @@ contract('Rocket', accounts => {
     myNFT = await MyNFTContract.new();
     rocketLogic = await Rocket.new();
     const rocketConstructCode = rocketLogic.contract.methods
-      .initialize('Rocket')
+      .initialize("Rocket")
       .encodeABI();
     const proxy = await Proxy.new(rocketConstructCode, rocketLogic.address);
     myBank = await Rocket.at(proxy.address);
@@ -27,88 +27,88 @@ contract('Rocket', accounts => {
     // console.log('Proxy Rocket deployed at: ', myBank.address);
   }
 
-  describe('Standard Deposit and Withdraw flow', function() {
+  describe("Standard Deposit and Withdraw flow", function() {
     before(async function() {
       await deploy();
     });
-    it('deployer is owner, mintToken', async function() {
+    it("deployer is owner, mintToken", async function() {
       await myNFT.mintToken(owner, 0);
       // console.log(myNFT.balanceOf(owner));
       expect(await myNFT.ownerOf(0)).to.equal(owner);
     });
 
-    it('should be able to transfer token to bank', async function() {
+    it("should be able to transfer token to bank", async function() {
       await myNFT.safeTransferFrom(owner, myBank.address, 0, { from: owner });
       expect(await myNFT.ownerOf(0)).to.equal(myBank.address);
     });
 
-    it('contract bank is owner', async function() {
+    it("contract bank is owner", async function() {
       expect(await myNFT.ownerOf(0)).to.equal(myBank.address);
     });
 
-    it('contract bank understands who is owner internally', async function() {
+    it("contract bank understands who is owner internally", async function() {
       expect(await myBank.ownerOf(myNFT.address, 0)).to.equal(owner);
     });
 
-    it('original owner is owner in bank', async function() {
+    it("original owner is owner in bank", async function() {
       expect(await myBank.ownerOf(myNFT.address, 0)).to.equal(owner);
     });
 
-    it('should be able to transfer from bank to original contract', async function() {
-      await myBank.safeTransferFrom(myNFT.address, owner, owner, 0, '0x0a', {
+    it("should be able to transfer from bank to original contract", async function() {
+      await myBank.safeTransferFrom(myNFT.address, owner, owner, 0, "0x0a", {
         from: owner
       }),
         expect(await myNFT.ownerOf(0)).to.equal(owner);
     });
 
-    it('original owner is owner', async function() {
+    it("original owner is owner", async function() {
       expect(await myNFT.ownerOf(0)).to.equal(owner);
     });
 
-    it('original owner is not owner after he has transferred it', async function() {
+    it("original owner is not owner after he has transferred it", async function() {
       expectRevert(
         myBank.ownerOf(myNFT.address, 0),
-        'ERC721: owner query for nonexistent token'
+        "ERC721: owner query for nonexistent token"
       );
     });
   });
 
-  describe('seize collateral scenario', function() {
+  describe("seize collateral scenario", function() {
     before(async function() {
       await deploy();
     });
-    it('Deployer is owner, mint Token', async function() {
+    it("Deployer is owner, mint Token", async function() {
       await myNFT.mintToken(owner, 0);
       expect(await myNFT.ownerOf(0)).to.equal(owner);
     });
-    it('transfer from owner to reciever', async function() {
+    it("transfer from owner to reciever", async function() {
       await myNFT.safeTransferFrom(owner, receiver, 0, { from: owner });
       expect(await myNFT.ownerOf(0)).to.equal(receiver);
     });
 
-    it('transfer from reciever to bank', async function() {
+    it("transfer from reciever to bank", async function() {
       await myNFT.safeTransferFrom(receiver, myBank.address, 0, {
         from: receiver
       });
       expect(await myNFT.ownerOf(0)).to.equal(myBank.address);
     });
 
-    it('admin lock', async function() {
+    it("admin lock", async function() {
       await myBank.adminLock(myNFT.address, 0, { from: owner });
       expect(await myBank.isAdminLocked(myNFT.address, 0)).to.equal(true);
     });
 
-    it('admin seize collateral', async function() {
+    it("admin seize collateral", async function() {
       expect(await myNFT.ownerOf(0)).to.equal(myBank.address);
       expect(await myBank.ownerOf(myNFT.address, 0)).to.equal(receiver);
-      await myBank.adminCollateralize(myNFT.address, owner, 0, '0x0a', {
+      await myBank.adminCollateralize(myNFT.address, owner, 0, "0x0a", {
         from: owner
       });
       // expect(await myBank.ownerOf(myNFT.address, 0)).to.equal(owner);
       expect(await myNFT.ownerOf(0)).to.equal(owner);
     });
 
-    it('safe transfer from owner to owner', async function() {
+    it("safe transfer from owner to owner", async function() {
       await myNFT.safeTransferFrom(owner, owner, 0, {
         from: owner
       }),
@@ -116,68 +116,68 @@ contract('Rocket', accounts => {
     });
   });
 
-  describe('Admin Locks Token, Token Depositor Withdraw Fails', function() {
+  describe("Admin Locks Token, Token Depositor Withdraw Fails", function() {
     before(async function() {
       await deploy();
     });
-    it('Deployer is owner, mint Token', async function() {
+    it("Deployer is owner, mint Token", async function() {
       await myNFT.mintToken(owner, 0);
       expect(await myNFT.ownerOf(0)).to.equal(owner);
     });
 
-    it('transfer from owner to reciever', async function() {
+    it("transfer from owner to reciever", async function() {
       await myNFT.safeTransferFrom(owner, receiver, 0, { from: owner });
       expect(await myNFT.ownerOf(0)).to.equal(receiver);
     });
 
-    it('transfer from reciever to bank', async function() {
+    it("transfer from reciever to bank", async function() {
       await myNFT.safeTransferFrom(receiver, myBank.address, 0, {
         from: receiver
       });
       expect(await myNFT.ownerOf(0)).to.equal(myBank.address);
     });
 
-    it('admin lock', async function() {
+    it("admin lock", async function() {
       await myBank.adminLock(myNFT.address, 0, { from: owner });
       expect(await myBank.isAdminLocked(myNFT.address, 0)).to.equal(true);
     });
 
-    it('withdraw should fail', async function() {
+    it("withdraw should fail", async function() {
       expectRevert(
-        myBank.safeTransferFrom(myNFT.address, receiver, receiver, 0, '0x0a', {
+        myBank.safeTransferFrom(myNFT.address, receiver, receiver, 0, "0x0a", {
           from: receiver
         }),
-        'administrator lock'
+        "administrator lock"
       );
     });
   });
 
-  describe('Ownable functions openzepplin', function() {
+  describe("Ownable functions openzepplin", function() {
     before(async function() {
       await deploy();
     });
-    it('Owner Is Owner', async function() {
+    it("Owner Is Owner", async function() {
       expect(await myBank.isOwner({ from: owner })).to.equal(true);
     });
-    it('reciever is not owner', async function() {
+    it("reciever is not owner", async function() {
       expect(await myBank.isOwner({ from: receiver })).to.equal(false);
     });
-    it('Owner owns contract', async function() {
+    it("Owner owns contract", async function() {
       expect(await myBank.owner()).to.equal(owner);
     });
   });
 
-  describe('Proxy upgrade', async function() {
+  describe("Proxy upgrade", async function() {
     before(async function() {
       await deploy();
     });
-    it('Upgrade security', async () => {
+    it("Upgrade security", async () => {
       // Test original logic contract
       await expectRevert(
-        myBank.initialize('submarine', {
+        myBank.initialize("submarine", {
           from: owner
         }),
-        'The library has already been initialized.'
+        "The library has already been initialized."
       );
 
       // Deploy new rocket logic/library contract
@@ -188,7 +188,7 @@ contract('Rocket', accounts => {
         myBank.updateCode(newRocketLogic.address, {
           from: receiver
         }),
-        'Ownable: caller is not the owner'
+        "Ownable: caller is not the owner"
       );
 
       // Perform the upgrade
@@ -198,10 +198,10 @@ contract('Rocket', accounts => {
 
       // Try to call initialize after the upgrade
       await expectRevert(
-        myBank.initialize('submarine', {
+        myBank.initialize("submarine", {
           from: owner
         }),
-        'The library has already been initialized.'
+        "The library has already been initialized."
       );
 
       // Try to perform another upgrade from non-admin account
@@ -209,8 +209,31 @@ contract('Rocket', accounts => {
         myBank.updateCode(rocketLogic.address, {
           from: receiver
         }),
-        'Ownable: caller is not the owner'
+        "Ownable: caller is not the owner"
       );
     });
+  });
+  describe("Test Non safe Recover", async function() {
+    before(async function() {
+      await deploy();
+    });
+    it("Deployer is owner, mint Token", async function() {
+      await myNFT.mintToken(owner, 0);
+      expect(await myNFT.ownerOf(0)).to.equal(owner);
+    });
+    it("transfer from owner to bank, non safe", async function() {
+      await myNFT.transferFrom(owner, myBank.address, 0, { from: owner });
+      expect(await myNFT.ownerOf(0)).to.equal(myBank.address);
+      expectRevert(myBank.ownerOf(myNFT.address, 0), "ERC721: owner query for nonexistent token")
+    });
+    // it("check owner")
+    it("Recover non safe transfer from bank", async function() {
+      await myBank.recoverNonSafeTransferredERC721(myNFT.address, 0, owner, {from: owner});
+      expect(await myNFT.ownerOf(0)).to.equal(owner);
+    });
+    // it("should be able to transfer token to bank", async function() {
+    //   await myNFT.safeTransferFrom(owner, myBank.address, 0, { from: owner });
+    //   expect(await myNFT.ownerOf(0)).to.equal(myBank.address);
+    // });
   });
 });

@@ -171,7 +171,6 @@ contract Rocket is
             _tokenOwner[contractAddress][tokenId] == address(0),
             "token is owned"
         );
-
         IERC721(contractAddress).safeTransferFrom(
             address(this),
             to,
