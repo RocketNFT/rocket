@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+#nav {
+  background: none;
+  box-shadow: none;
+}
+
 .loadDiv {
   width: 100%;
   margin: 0 auto;
@@ -15,7 +20,6 @@
 .bg {
   min-height: 800px;
   background-image: "LogoRocket.png";
-  /* background-image: linear-gradient(160deg, white 70%, #acd7ec 30%); */
 }
 
 .logoClass {
@@ -45,31 +49,25 @@
   padding-right: 12%;
   padding-left: 12%;
   padding-top: 5%;
-  /* padding-bottom: 5%; */
   font-family: "Ubuntu", sans-serif;
-  /* max-width: 150px; */
 }
 
 .pStyle2 {
   font-weight: 500;
-  /* padding: 12%; */
   padding-right: 12%;
   padding-left: 12%;
   padding-top: 5%;
   padding-bottom: 5%;
   font-family: "Ubuntu", sans-serif;
-  /* max-width: 150px; */
 }
 .pStyle4 {
   font-weight: 500;
-  /* padding: 12%; */
   padding-right: 12%;
   padding-left: 12%;
   padding-top: 5%;
   padding-bottom: 2%;
   font-family: "Ubuntu", sans-serif;
   text-shadow: 1px 1px #87ccee;
-  /* max-width: 150px; */
 }
 
 .spanStyle1 {
@@ -78,14 +76,13 @@
   text-shadow: 1px 1px #87ccee;
 }
 
-.buttonStyle1 {
-  color: "#E8F7EE";
-  /* font-family: "Ubuntu", sans-serif; */
-}
-
 .pStyle3 {
   font-weight: 700;
   margin-bottom: "3%";
+}
+
+.mvpSpan {
+  color: #87ccee;
 }
 
 .gridStyle1 {
@@ -143,7 +140,6 @@
 
 .imgStyle1 {
   height: 35px;
-  /* margin-left: 5%; */
 }
 
 @media only screen and (max-width: 500px) {

@@ -362,16 +362,9 @@ class App extends Component {
       return (
         <div className="loadDiv">
           <div>
-            {/* <Grid container spacing={3}> */}
-            {/* <Grid item xs={12} id="clockClass"> */}
-            {/* <ClockLoader size={50} color={"white"} loading={true} /> */}
-            {/* </Grid> */}
-            {/* <Grid item xs={12} id="loadStyle"> */}
             <span style={{ fontFamily: "Ubuntu, sans-serif" }}>
               Loading Web3, accounts, and contract...
             </span>
-            {/* </Grid> */}
-            {/* </Grid> */}
           </div>
         </div>
       );
@@ -431,7 +424,7 @@ class App extends Component {
             <Grid container spacing={3} className="gridContainer">
               <Grid item xs={12}>
                 <h2 className="logoClass">
-                  <span style={{ color: "#87ccee" }}>MVP</span> Rocket
+                  <span className="mvpSpan">MVP</span> Rocket
                 </h2>
               </Grid>
               <Grid item xs={12}>

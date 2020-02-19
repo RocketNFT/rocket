@@ -61,11 +61,7 @@ class ButtonAppBar extends Component {
     const { address, balance } = this.props;
     return (
       <div>
-        <AppBar
-          id="nav"
-          position="fixed"
-          style={{ background: "none", boxShadow: "none" }}
-        >
+        <AppBar id="nav" position="fixed">
           <Toolbar>
             <Grid container>
               <Grid item xs={6}>
@@ -78,9 +74,7 @@ class ButtonAppBar extends Component {
               </Grid>
               <Grid item xs={6}>
                 <Button
-                  // variant="outlined"
                   style={{ color: "#E8F7EE" }}
-                  className="buttonStyle1"
                   id="wallet"
                   onClick={this.handleOpen}
                 >
