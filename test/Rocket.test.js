@@ -3,7 +3,7 @@ const { expectRevert } = require("@openzeppelin/test-helpers");
 const { expect } = require("chai");
 
 const Proxy = artifacts.require("Proxy");
-const Rocket = artifacts.require("Rocket"); // Loads a compiled contract
+const Rocket = artifacts.require("Rocket");
 const MyNFTContract = artifacts.require("NFToken");
 
 contract("Rocket", accounts => {
@@ -21,10 +21,6 @@ contract("Rocket", accounts => {
       .encodeABI();
     const proxy = await Proxy.new(rocketConstructCode, rocketLogic.address);
     myBank = await Rocket.at(proxy.address);
-    // console.log('Owner: ', owner);
-    // console.log('MyNFT deployed at: ', myNFT.address);
-    // console.log('rocketLogic deployed at: ', rocketLogic.address);
-    // console.log('Proxy Rocket deployed at: ', myBank.address);
   }
 
   describe("Standard Deposit and Withdraw flow", function() {
@@ -33,7 +29,6 @@ contract("Rocket", accounts => {
     });
     it("deployer is owner, mintToken", async function() {
       await myNFT.mintToken(owner, 0);
-      // console.log(myNFT.balanceOf(owner));
       expect(await myNFT.ownerOf(0)).to.equal(owner);
     });
 
@@ -104,7 +99,6 @@ contract("Rocket", accounts => {
       await myBank.adminCollateralize(myNFT.address, owner, 0, "0x0a", {
         from: owner
       });
-      // expect(await myBank.ownerOf(myNFT.address, 0)).to.equal(owner);
       expect(await myNFT.ownerOf(0)).to.equal(owner);
     });
 
@@ -172,7 +166,6 @@ contract("Rocket", accounts => {
       await deploy();
     });
     it("Upgrade security", async () => {
-      // Test original logic contract
       await expectRevert(
         myBank.initialize("submarine", {
           from: owner
@@ -180,10 +173,8 @@ contract("Rocket", accounts => {
         "The library has already been initialized."
       );
 
-      // Deploy new rocket logic/library contract
       newRocketLogic = await Rocket.new();
 
-      // Try to perform upgrade from non-admin account
       await expectRevert(
         myBank.updateCode(newRocketLogic.address, {
           from: receiver
@@ -191,12 +182,10 @@ contract("Rocket", accounts => {
         "Ownable: caller is not the owner"
       );
 
-      // Perform the upgrade
       await myBank.updateCode(newRocketLogic.address, {
         from: owner
       });
 
-      // Try to call initialize after the upgrade
       await expectRevert(
         myBank.initialize("submarine", {
           from: owner
@@ -204,7 +193,6 @@ contract("Rocket", accounts => {
         "The library has already been initialized."
       );
 
-      // Try to perform another upgrade from non-admin account
       await expectRevert(
         myBank.updateCode(rocketLogic.address, {
           from: receiver
@@ -224,16 +212,16 @@ contract("Rocket", accounts => {
     it("transfer from owner to bank, non safe", async function() {
       await myNFT.transferFrom(owner, myBank.address, 0, { from: owner });
       expect(await myNFT.ownerOf(0)).to.equal(myBank.address);
-      expectRevert(myBank.ownerOf(myNFT.address, 0), "ERC721: owner query for nonexistent token")
+      expectRevert(
+        myBank.ownerOf(myNFT.address, 0),
+        "ERC721: owner query for nonexistent token"
+      );
     });
-    // it("check owner")
     it("Recover non safe transfer from bank", async function() {
-      await myBank.recoverNonSafeTransferredERC721(myNFT.address, 0, owner, {from: owner});
+      await myBank.recoverNonSafeTransferredERC721(myNFT.address, 0, owner, {
+        from: owner
+      });
       expect(await myNFT.ownerOf(0)).to.equal(owner);
     });
-    // it("should be able to transfer token to bank", async function() {
-    //   await myNFT.safeTransferFrom(owner, myBank.address, 0, { from: owner });
-    //   expect(await myNFT.ownerOf(0)).to.equal(myBank.address);
-    // });
   });
 });
