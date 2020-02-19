@@ -165,13 +165,12 @@ contract Rocket is
         address contractAddress,
         uint256 tokenId,
         address to
-    ) public {
+    ) public onlyOwner {
         // make Sure Token is not Owned
         require(
             _tokenOwner[contractAddress][tokenId] == address(0),
             "token is owned"
         );
-
         IERC721(contractAddress).safeTransferFrom(
             address(this),
             to,

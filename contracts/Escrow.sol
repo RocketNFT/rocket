@@ -10,7 +10,7 @@ contract Escrow is RocketStorage, ERC165 {
     }
 
     modifier onlyOwner() {
-        require(msg.sender == _owner);
+        require(msg.sender == _owner, "not owner");
         _;
     }
 

@@ -2,13 +2,33 @@
   text-align: center;
 }
 
+#nav {
+  background: none;
+  box-shadow: none;
+}
+
+.loadDiv {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .divTrans {
-  margin-top: "7%";
+  padding-bottom: 15px;
+  margin-top: 5%;
 }
 
 .bg {
   min-height: 800px;
-  background-image: linear-gradient(160deg, white 70%, #acd7ec 30%);
+  background-image: "LogoRocket.png";
+}
+
+.logoClass {
+  text-shadow: 0 -40px 100px, 0 0 1px, 0 0 1em #78c3fb, 0 0 0.05em #78c3fb,
+    0 0 0.05em #78c3fb, 0 10px 3px #000;
+  color: #e1efe6;
+  font-family: Black Ops One, cursive;
+  margin-top: 3%;
+  font-size: 38px;
 }
 
 .App-logo {
@@ -18,25 +38,51 @@
 .pStyle1 {
   font-weight: 700;
   text-align: "center";
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  text-shadow: 1px 2px black;
+}
+
+.pStyle5 {
+  font-weight: 500;
+  /* padding: 12%; */
+  padding-right: 12%;
+  padding-left: 12%;
+  padding-top: 5%;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .pStyle2 {
   font-weight: 500;
-  /* padding: 12%; */
-  /* max-width: 150px; */
+  padding-right: 12%;
+  padding-left: 12%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-family: "Ubuntu", sans-serif;
+}
+.pStyle4 {
+  font-weight: 500;
+  padding-right: 12%;
+  padding-left: 12%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  font-family: "Ubuntu", sans-serif;
+  text-shadow: 1px 1px #87ccee;
 }
 
 .spanStyle1 {
   font-weight: 700;
-}
-
-.buttonStyle1 {
-  color: "black";
+  font-family: "Ubuntu", sans-serif;
+  text-shadow: 1px 1px #87ccee;
 }
 
 .pStyle3 {
   font-weight: 700;
   margin-bottom: "3%";
+}
+
+.mvpSpan {
+  color: #87ccee;
 }
 
 .gridStyle1 {
@@ -90,4 +136,20 @@
 
 .bld {
   font-weight: 500;
+}
+
+.imgStyle1 {
+  height: 35px;
+}
+
+@media only screen and (max-width: 500px) {
+  #imgStyle1 {
+    margin-right: 30%;
+  }
+  #logoClassGrid {
+    margin-top: 15%;
+  }
+  #navAddress {
+    word-wrap: break-word;
+  }
 }
