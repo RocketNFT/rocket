@@ -46,9 +46,6 @@ class App extends Component {
       };
     }
   };
-  // componentDidUpdate = async () => {
-  //   this.updateTokenCount();
-  // };
   /**
    * Instanciate new contracts like Dummy NFT & BANK
    */
@@ -94,8 +91,6 @@ class App extends Component {
         isBankAdmin,
         isERC721Owner
       };
-      // console.log(isAdminLocked);
-      // console.log(newState);
       this.setState(newState);
     } catch (error) {
       // Catch any errors for any of the above operations.
@@ -365,32 +360,18 @@ class App extends Component {
     } = this.state;
     if (!web3) {
       return (
-        <div style={{ width: "100%", margin: "0 auto" }}>
-          <div
-          // style={{ marginLeft: "45%" }}
-          >
-            <Grid container spacing={3}>
-              <Grid
-                item
-                xs={12}
-                id="clockClass"
-                // style={{
-                //   width: "100%",
-                //   maxWidth: "500px",
-                //   marginLeft: "auto",
-                //   marginRight: "auto",
-                //   textAlign: "center",
-                //   float: "left"
-                // }}
-              >
-                <ClockLoader size={50} color={"white"} loading={true} />
-              </Grid>
-              <Grid item xs={12} id="loadStyle">
-                <span style={{ fontFamily: "Ubuntu, sans-serif" }}>
-                  Loading Web3, accounts, and contract...
-                </span>
-              </Grid>
-            </Grid>
+        <div className="loadDiv">
+          <div>
+            {/* <Grid container spacing={3}> */}
+            {/* <Grid item xs={12} id="clockClass"> */}
+            {/* <ClockLoader size={50} color={"white"} loading={true} /> */}
+            {/* </Grid> */}
+            {/* <Grid item xs={12} id="loadStyle"> */}
+            <span style={{ fontFamily: "Ubuntu, sans-serif" }}>
+              Loading Web3, accounts, and contract...
+            </span>
+            {/* </Grid> */}
+            {/* </Grid> */}
           </div>
         </div>
       );
@@ -446,20 +427,10 @@ class App extends Component {
       <div className="App">
         <ButtonAppBar {...AccountCardProps} />
         <MediaQuery minDeviceWidth={1001}>
-          <div
-            className="divTrans"
-            style={{ paddingBottom: "15px", marginTop: "5%" }}
-          >
+          <div className="divTrans">
             <Grid container spacing={3} className="gridContainer">
               <Grid item xs={12}>
-                <h2
-                  className="logoClass"
-                  style={{
-                    fontFamily: "Black Ops One, cursive",
-                    marginTop: "3%",
-                    fontSize: "38px"
-                  }}
-                >
+                <h2 className="logoClass">
                   <span style={{ color: "#87ccee" }}>MVP</span> Rocket
                 </h2>
               </Grid>
@@ -628,7 +599,7 @@ class App extends Component {
             style={{ paddingBottom: "15px", marginTop: "5%" }}
           >
             <Grid container spacing={3} className="gridContainer">
-              <Grid item xs={12}>
+              <Grid item xs={12} id="logoClassGrid">
                 <h2
                   className="logoClass"
                   style={{
@@ -805,20 +776,6 @@ class App extends Component {
             </Grid>
           </div>
         </MediaQuery>
-        {/* <div
-          style={{
-            padding: "10px"
-          }}
-        >
-          <Grid container spacing={3}>
-            <Grid item xs={6}>
-              yur
-            </Grid>
-            <Grid item xs={6}>
-              yurd
-            </Grid>
-          </Grid>
-        </div> */}
       </div>
     );
   }

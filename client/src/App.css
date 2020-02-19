@@ -2,8 +2,14 @@
   text-align: center;
 }
 
+.loadDiv {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .divTrans {
-  margin-top: "7%";
+  padding-bottom: 15px;
+  margin-top: 5%;
 }
 
 .bg {
@@ -16,6 +22,9 @@
   text-shadow: 0 -40px 100px, 0 0 1px, 0 0 1em #78c3fb, 0 0 0.05em #78c3fb,
     0 0 0.05em #78c3fb, 0 10px 3px #000;
   color: #e1efe6;
+  font-family: Black Ops One, cursive;
+  margin-top: 3%;
+  font-size: 38px;
 }
 
 .App-logo {
@@ -26,6 +35,8 @@
   font-weight: 700;
   text-align: "center";
   font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  text-shadow: 1px 2px black;
 }
 
 .pStyle5 {
@@ -57,12 +68,14 @@
   padding-top: 5%;
   padding-bottom: 2%;
   font-family: "Ubuntu", sans-serif;
+  text-shadow: 1px 1px #87ccee;
   /* max-width: 150px; */
 }
 
 .spanStyle1 {
   font-weight: 700;
   font-family: "Ubuntu", sans-serif;
+  text-shadow: 1px 1px #87ccee;
 }
 
 .buttonStyle1 {
@@ -128,72 +141,19 @@
   font-weight: 500;
 }
 
-/* #loadStyle {
-  position: absolute;
-  margin: 18% 25% auto;
-  color: white;
-}
-
-@media only screen and (min-width: 200px) {
-  #loadStyle {
-    margin: 33% 8% auto;
-    color: white;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  #loadStyle {
-    margin: 20% 26% auto;
-    color: white;
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  #loadStyle {
-    margin: 15% 28% auto;
-    color: white;
-  }
-}
-
-@media only screen and (min-width: 1500px) {
-  #loadStyle {
-    margin: 15% 35% auto;
-    color: white;
-  }
-}
-
-@media only screen and (min-width: 2000px) {
-  #loadStyle {
-    margin: 15% 33% auto;
-    color: white;
-  }
-}
-
-#clockClass {
-  position: absolute;
-  margin: 10% 36% auto;
+.imgStyle1 {
+  height: 35px;
+  /* margin-left: 5%; */
 }
 
 @media only screen and (max-width: 500px) {
-  #clockClass {
-    position: absolute;
-    margin: 15% 31% auto;
-    color: white;
+  #imgStyle1 {
+    margin-right: 30%;
+  }
+  #logoClassGrid {
+    margin-top: 15%;
+  }
+  #navAddress {
+    word-wrap: break-word;
   }
 }
-
-@media only screen and (min-width: 1500px) {
-  #clockClass {
-    position: absolute;
-    margin: 10% 41% auto;
-    color: white;
-  }
-}
-
-@media only screen and (min-width: 2000px) {
-  #clockClass {
-    position: absolute;
-    margin: 10% 40% auto;
-    color: white;
-  }
-} */

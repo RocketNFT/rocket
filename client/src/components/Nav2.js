@@ -23,12 +23,11 @@ class ButtonAppBar extends Component {
 
   handleScroll = () => {
     if (
-      document.body.scrollTop > 10 ||
-      document.documentElement.scrollTop > 10
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
     ) {
       document.getElementById("nav").style.background = "#054a91";
       $("#nav").css({
-        // background: "white",
         paddingTop: "15px",
         color: "#E8F7EE"
       });
@@ -36,13 +35,11 @@ class ButtonAppBar extends Component {
       $("#nav").css({
         background: "transparent",
         "box-shadow": "none"
-        // color: "black"
       });
     }
   };
 
   componentDidMount = () => {
-    // console.log(document.getElementById("wallet"));
     window.addEventListener("scroll", this.handleScroll);
     var doc = document.getElementById("wallet").textContent;
     var str = doc.match(/.{1,6}/g);
@@ -76,7 +73,7 @@ class ButtonAppBar extends Component {
                   src="LogoRocket.png"
                   alt="ok"
                   className="imgStyle1"
-                  style={{ height: "35px" }}
+                  id="imgStyle1"
                 />
               </Grid>
               <Grid item xs={6}>
@@ -100,7 +97,7 @@ class ButtonAppBar extends Component {
         >
           <div className="divStyle1" style={{ padding: "20px" }}>
             <p className="spanStyle1">Address:</p>
-            <p>{address}</p>
+            <p id="navAddress">{address}</p>
             <p className="spanStyle1">Balance: </p>
             <p className="bld">{balance}</p>
           </div>
