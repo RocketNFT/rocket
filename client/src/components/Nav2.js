@@ -22,16 +22,15 @@ class ButtonAppBar extends Component {
   }
 
   handleScroll = () => {
-    console.log("here");
     if (
       document.body.scrollTop > 10 ||
       document.documentElement.scrollTop > 10
     ) {
-      document.getElementById("nav").style.background = "white";
+      document.getElementById("nav").style.background = "#054a91";
       $("#nav").css({
         // background: "white",
-        paddingTop: "15px"
-        // color: "black"
+        paddingTop: "15px",
+        color: "#E8F7EE"
       });
     } else {
       $("#nav").css({
@@ -82,7 +81,8 @@ class ButtonAppBar extends Component {
               </Grid>
               <Grid item xs={6}>
                 <Button
-                  variant="outlined"
+                  // variant="outlined"
+                  style={{ color: "#E8F7EE" }}
                   className="buttonStyle1"
                   id="wallet"
                   onClick={this.handleOpen}
@@ -100,7 +100,7 @@ class ButtonAppBar extends Component {
         >
           <div className="divStyle1" style={{ padding: "20px" }}>
             <p className="spanStyle1">Address:</p>
-            <p className="pStyle4">{address}</p>
+            <p>{address}</p>
             <p className="spanStyle1">Balance: </p>
             <p className="bld">{balance}</p>
           </div>
