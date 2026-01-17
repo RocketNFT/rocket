@@ -9,7 +9,7 @@
     "react-dom": "16.11.0",
     "react-responsive": "^8.0.3",
     "react-scripts": "^3.3.0",
-    "web3": "1.2.2"
+    "web3": "4.16.0"
   },
   "scripts": {
     "copyBuild": "copyfiles -u 2 ../build/**/*.json src",
